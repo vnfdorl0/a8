@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0329과제</title>
+</head>
+<body>
+    
+        <h1 style="background-color:aquamarine; width: 200px; height: 100px;">
+            버튼1</h1>
+        <h2 style="background-color:cornflowerblue; width: 200px; height: 100px;">
+            버튼2</h2>
+
+        <script>
+            let 버튼1
+            버튼1 = document.querySelector("h1")
+
+            let 버튼2
+            버튼2 = document.querySelector("h2")
+
+            버튼1.addEventListener("mousedown", function() {
+                버튼1.style.backgroundColor = "coral"
+            })
+
+            버튼1.addEventListener("mouseup", function() {
+                버튼1.style.backgroundColor = "aquamarine"
+            })
+
+            버튼2.addEventListener("mousedown", function() {
+                버튼2.style.backgroundColor = "yellow"
+            })
+
+            버튼2.addEventListener("mouseup", function() {
+                버튼2.style.backgroundColor = "cornflowerblue"
+            })
+        </script>
+</body>
+</html>
