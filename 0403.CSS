@@ -1,0 +1,8 @@
+.main {color:rgb(213, 250, 252); background-color:cadetblue;}
+
+ul {display: flex;}
+li {list-style: none;}
+
+p {font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
