@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0404 과제</title>
+
+    <style>
+        span {font-size: 50px; color: rgb(63, 63, 255);}
+        .a {font-size: 20px;}
+        .a1 {color: green;}
+        .nv {border: 3px gray solid; background-color: rgb(197, 255, 236);}
+        .cen {text-align: center;}
+
+        #sec1 {border: 3px blue solid; background-color: rgb(214, 244, 255); padding:10px;}
+        #ft {color:blue}
+
+        .se2 {background-color:rgb(247, 209, 255); border-radius: 30px;}
+        .art {background-color:rgb(254, 208, 106);}
+        .pd {padding:10px;}
+        .fot {background-color:beige;}
+    </style>
+</head>
+<body>
+    <header style="border: 2px red solid; padding:15px;">
+        <h2><span>header</span>태그 부분</h2>
+        <h3>header 태그에 테두리, 내부여백 적용할 것</h3>
+        <a href="https://www.naver.com/" target="_blank" class="a a1">네이버 링크, 클릭시 새 탭으로 연결되도록 할 것</a>
+        <p style="border: 3px green solid; width: 50%;">p태그, 테두리 적용, 너비 50%로 적용</p>
+
+        <nav class="nv">
+            <p class="a">nav 태그로 만든 영역</p>
+            <ul>
+                <li>ul과 li로 만든 리스트</li>
+                <li>ul 태그 내부에 li 태그가 들어감</li>
+            </ul>
+            <h2 class="cen">class를 활용하여 스타일을 적용할 것</h2>
+        </nav>
+    </header>
+    <br>
+    <hr>
+    <br>
+    <main>
+        <section id="sec1">
+                <h3><span>main</span>태그 내부의 첫번쨰 <span>section</span> 태그. 이 section에는 id를 통해 스타일을 적용할 것. 
+                    <br> 내부여백, 테두리 스타일 적용</h3>
+            
+            <h3>원하는 사진 넣기(이미지의 따라 사이즈 조절 필요)</h3>
+            <img src="">
+            <img src="">
+            <img src="">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+        <br>
+        <hr>
+        <br>
+        <section class="se2 pd">
+            <h2><span>main</span>태그 내부의 두번쨰 <span>section</span> 태그.</h2>
+            <h3> 이 section에는 id를 통해 스타일을 적용할 것</h3>
+            <h3>내부여백, 모서리 곡률 적용</h3>
+            <article class="art pd">
+                <h3>section태그 내부의 첫번쨰 article 태그1</h3>
+                <img src="">
+                <img src="">
+            </article>
+            <br>
+            <article class="art pd">
+                <h3>section태그 내부의 첫번쨰 article 태그2</h3>
+                <img src="">
+            </article>
+        </section>
+    </main>
+    <br>
+    <hr>
+    <br>
+    <footer class="fot pd">
+        <h1 id="ft">footer 태그</h1>
+        <h3>배경색, 내부여백 넣기</h3>
+        <h2>footer 영역은 보통 맨 밑에 저작권, 연락처 등이 표시됨</h2>
+    </footer>
+</body>
+</html>
