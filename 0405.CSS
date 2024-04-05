@@ -1,0 +1,18 @@
+#title1 {
+    font-size: 20pt;
+    font-weight: 900;
+    letter-spacing: 10px
+}                
+#title2 {
+    line-height: 100px;
+    text-decoration:overline;
+}
+#title3 {
+    font-style:italic;
+    font-size:30pt;
+    text-shadow: 4px 4px 2px gray;
+}
+
+li {
+    list-style: none;
+}
