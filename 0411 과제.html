@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0411과제</title>
+
+    <style>
+        #h {font-size:40pt;}
+        .s {font-weight:700}
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend><h1 id="h">회원가입 페이지</h1></legend>
+            <h1>로그인 정보</h1>
+        <label><span class="s">ID 입력</span><input type="text" placeholder="최대 10자"></label>
+        <br>
+        <label><span class="s">비밀번호</span><input type="password" placeholder="영어, 숫자 섞어서"></label>
+        <label><span class="s">비밀번호 확인</span><input type="password" placeholder="영어, 숫자 섞어서"></label>
+        <hr>
+
+        <h1>개인정보</h1>
+
+        <h4>주소</h4>
+        <label><input type="text"></label>
+
+        <h4>연령대</h4>
+        <label>10~19<input type="radio" name="age" value="10"></label>
+        <label>20~29<input type="radio" name="age" value="20"></label>
+        <label>30~39<input type="radio" name="age" value="30"></label>
+        <label>40~49<input type="radio" name="age" value="40"></label>
+        <label>50이상<input type="radio" name="age" value="50"></label>
+
+        <h4>성별</h4>
+        <label>남<input type="radio" name="t" value="m"></label>
+        <label>여<input type="radio" name="t" value="w"></label>
+        
+        <h4>취미</h4>
+        <label>게임<input type="checkbox"></label>
+        <label>유튜브<input type="checkbox"></label>
+        <label>잉여짓<input type="checkbox"></label>
+        <label>운동<input type="checkbox"></label>
+        <label>독서<input type="checkbox"></label>
+        <label>창작<input type="checkbox"></label>
+        <hr>
+        <button type="submit">회원가입</button>
+        <button type="reset">다시 입력</button>
+        </fieldset>
+        
+    </form>
+</body>
+</html>
