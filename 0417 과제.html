@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0417 과제</title>
+
+    <style>
+        button {background-color:cornflowerblue; color:white;
+        width:200px; height:50px; border-radius:10px;
+        border:0px black solid; margin:15px; font-size:30pt;
+        }
+        #img {height:300px;}
+    </style>
+</head>
+<body>
+    <h1>버튼 클릭에 따른 이미지 슬라이드</h1>
+    <button id="b1">1</button>
+    <button id="b2">2</button>
+    <button id="b3">3</button>
+    <br>
+    <img id="img" src="4.webp" alt="">
+    
+    <script>
+        let 이미지 = document.querySelector("#img")
+
+        let 버튼1 = document.querySelector("#b1")
+        버튼1.addEventListener("click", function() {
+            이미지.setAttribute("src", "/4.webp")
+        })
+
+        let 버튼2 = document.querySelector("#b2")
+        버튼2.addEventListener("click", function() {
+            이미지.setAttribute("src", "/5.webp")
+        })
+        let 버튼3 = document.querySelector("#b3")
+        버튼3.addEventListener("click", function() {
+            이미지.setAttribute("src", "/6.webp")
+        })
+    </script>
+</body>
+</html>
