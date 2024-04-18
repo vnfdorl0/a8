@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0418 과제2</title>
+    <style>
+        .ft {font-weight:700;}
+        .leg {font-size:40pt;}
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend class="ft leg">회원가입 페이지</legend>
+        <h1>로그인 정보</h1>
+        <label class="ft">ID 입력<input type="text" placeholder="최대 10자"></label><br>
+        <label class="ft">PW 입력<input type="password" placeholder="영어, 숫자 섞어서" required></label><br>
+        <label class="ft">PW 입력확인<input type="password" placeholder="영어, 숫자 섞어서" required></label>
+        <hr>
+        <h1>개인정보</h1>
+        <h4>주소</h4>
+        <label><input type="text"></label>
+        <h4>연령대</h4>
+        <label>10~19<input type="radio" name="ag" value="10"></label>
+        <label>20~29<input type="radio" name="ag"  value="20"></label>
+        <label>30~39<input type="radio" name="ag" value="30"></label>
+        <label>40~49<input type="radio" name="ag" value="40"></label>
+        <label>50이상<input type="radio" name="ag" value="50"></label>
+        <br>
+        <h4>성별</h4>
+        <label>남<input type="radio" name="mw" value="m"></label>
+        <label>여<input type="radio" name="mw" value="w"></label>
+        <h4>취미</h4>
+        <label>게임<input type="checkbox" value="g"></label>
+        <label>유튜브<input type="checkbox" value="u"></label>
+        <label>잉여짓<input type="checkbox" value="o"></label>
+        <label>운동<input type="checkbox" value="a"></label>
+        <label>독서<input type="checkbox" value="b"></label>
+        <label>여행<input type="checkbox" value="t"></label>
+        <label>창작<input type="checkbox" value="c"></label>
+        <h4>이메일</h4>
+        <label><input type="email" placeholder="abcd@naver.com"></label>
+        <h4>연락처</h4>
+        <label><input type="tel" placeholder="000-0000-0000"></label>
+        <h4>생년월일</h4>
+        <label><input type="date"></label>
+        <br><br>
+        <label>키(최소130 최대195 단위5) <input type="range" min="130" max="195" step="5"></label>
+        <br><br>
+        <label>사진 <input type="file"></label>
+        <hr>
+        <button type="submit">회원가입</button>
+        <button type="reset">다시 입력</button>
+        </fieldset>
+        
+    </form>
+</body>
+</html>
