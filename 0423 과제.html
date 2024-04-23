@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0423 과제</title>
+    <link rel="stylesheet" href="0423.CSS">
+</head>
+<body>
+    <div class="t">
+        <h1>주문 페이지</h1>
+        <p class="sm">치킨주문을 위한 페이지입니다. 정확한 내용을 기재 바랍니다.</p>
+    </div>
+    <form>  
+        <fieldset class="t">
+            <h2>메뉴 선택</h2>
+            <p class="sm">사진을 누르면 메뉴가 선택됨</p>
+            <label class="sm"><input type="radio" name="main" value=""><img src="1.webp">메뉴1</label>
+            <label class="sm"><input type="radio" name="main" value=""><img src="2.webp">메뉴2</label>
+            <label class="sm"><input type="radio" name="main" value=""><img src="3.webp">메뉴3</label>
+            <hr>
+            <h3>사이드메뉴</h3>
+            <label class="sm"><input type="checkbox" value="">치즈볼</label>
+            <label class="sm"><input type="checkbox" value="">치킨무</label>
+            <label class="sm"><input type="checkbox" value="">머스타드 소스</label>
+            <label class="sm"><input type="checkbox" value="">칠리 소스</label>
+            <br>
+            <h3>선택사항</h3>
+            <label class="sm"><input type="checkbox" value="">비닐 장갑</label>
+            <label class="sm"><input type="checkbox" value="">나무젓가락 제외</label>
+            <label class="sm"><input type="checkbox" value="">치킨 무 제외</label>
+            <label class="sm"><input type="checkbox" value="">소스 제외</label>
+            <br>
+            <label class="sm">맵기(1~5)<input type="range" min="1" max="5"></label><br>
+            <label>소스양
+                <select>
+                    <option value="">많음</option>
+                    <option value="">보통</option>
+                    <option value="">적음</option>
+                </select>
+            </label>
+            <h3>기타 희망사항</h3>
+            <label><textarea cols="60" rows="5"></textarea></label>
+        </fieldset><br>
+        <fieldset>
+            <div class="t">
+                <h2>주문 정보</h2>
+                <p class="sm">주문자의 정보</p>
+            </div>
+                <div class="sm">
+                <label class="sm">주문자 성명<input type="text" placeholder="홍길동"></label><br>
+                <label class="sm">전화번호<input type="tel" placeholder="000-0000-0000"></label><br>
+                <label class="sm">주소<input type="text" placeholder="ㅇㅇ동 ㅇㅇ번지"></label><br>
+                <label class="sm">쿠폰번호<input type="text" placeholder="0000-0000-0000"></label><br>
+                <label class="sm">도착날짜<input type="date"></label>
+                <br>
+                <label><span>지불방법</span><input type="radio" name="pay" value="" checked>카드</label>
+                <label><input type="radio" name="pay" value="">쿠폰</label>
+                <label><input type="radio" name="pay" value="">현금</label>
+                <br>
+                <label><span>카드사</span><input type="radio" name="card" value="">신한</label>
+                <label><input type="radio" name="card" value="">국민</label>
+                <label><input type="radio" name="card" value="">카카오</label>
+                <br>
+                <label>카드번호<input type="text" placeholder="000-0000-0000"></label>
+            </div>
+        </fieldset><br>
+        <fieldset>
+            <h2  class="t">개인정보 동의</h2>
+            <p class="sm t">주문 정보를 저장하기 위해 회원의 개인정보를 수집하고 있으며, 수집에 도의 하지 않으면 주문이 불가능 합니다.</p>
+            <label class="sm"><input type="radio" name="y/n" value="" checked>동의</label>
+            <label class="sm"><input type="radio" name="y/n" value="">거절</label>
+            <hr>
+            <h2 class="t">이벤트 문자 수신</h2>
+            <p class="sm t">이벤트 및 각종 혜택 정보 제공을 위한 문자 전송을 수신합니다.</p>
+            <label class="sm"><input type="radio" name="y/n2" value="" checked>동의</label>
+            <label class="sm"><input type="radio" name="y/n2" value="">거절</label>
+        </fieldset>
+        <div id="b">
+            <button type="submit">주문</button>
+            <button type="reset">주문취소</button>
+        </div>
+    </form>
+</body>
+</html>
