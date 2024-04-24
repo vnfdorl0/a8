@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0424수업</title>
+</head>
+<body>
+    <h1>Emmet: 매크로</h1>
+
+    <img src="1.webp" alt="" width="100px">
+    <button id="button1">버튼1</button>
+    <script>
+        let 이미지 = document.querySelector("img")
+
+        let 버튼1 = document.querySelector("#button1")
+        버튼1.addEventListener("click", function() {
+            이미지.setAttribute("src","/4.webp")
+        })
+    </script>
+</body>
+</html>
