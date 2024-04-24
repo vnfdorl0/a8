@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>IQ 테스트</h1>
+    
+    <label>이름 <input type="text" id="ipt1"></label><br><br>
+    <label>나이 <input type="text" id="ipt2"></label><br><br>
+    <label>성별 <input type="text" id="ipt3"></label><br><br>
+    <button>제출</button>
+    
+    <script>
+        let 이름 = document.querySelector("#ipt1")
+        let 나이 = document.querySelector("#ipt2")
+        let 성별 = document.querySelector("#ipt3")
+
+        let 버튼 = document.querySelector("button")
+        버튼.addEventListener("click", function() {
+            let 데이터1 = 이름.value
+            let 데이터2 = 나이.value
+            let 데이터3 = 성별.value
+            confirm(`${데이터1}님, ${데이터2}살에 ${데이터3}맞습니까?`)
+        })
+        
+    </script>
+</body>
+</html>
