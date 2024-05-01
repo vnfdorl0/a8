@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {width: 400px; height: 200px; background-color: chocolate;}
+        .children {color: rgb(255, 255, 255);}
+        .parent2 {width: 400px; height: 200px; background-color: cornflowerblue;}
+
+    </style>
+</head>
+<body>
+    <div class="parent">박스</div>
+    <br>
+    <div class="parent2">박스</div>
+    <script>
+        // 새로운 태그 생성
+        let 새로만든태그
+        새로만든태그 = document.createElement("p")
+        console.log(새로만든태그)
+
+        새로만든태그.textContent = "안녕하세요 태그 새로 만들었어요"
+        새로만든태그.classList.add("children")
+
+        // 만든 태그를 화면에 나타내기 : 부모에게 자식으로 만들어줘야 함
+        let 박스 = document.querySelector(".parent")
+        박스.appendChild(새로만든태그) // 자식을 갔다 붙인다
+
+        // 박스.removeChild(새로만든태그)
+
+        // 다른 부모에게 append시키면 자식이 옮겨간다
+        let 박스2 = document.querySelector(".parent2")
+        박스2.appendChild(새로만든태그)
+
+    </script>
+</body>
+</html>
