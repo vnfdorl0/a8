@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box { border:1px solid black; width: 300px; height: 300px;
+            display: inline-block; text-align: center;
+        }
+        button {width: 300px; height: 40px; font-size: 20pt;}
+        img {width: 250px;}
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <button class="start">시작</button>
+    <button class="end">정지</button>
+    <br><br>
+
+    <div class="box1"><h1>박스1</h1></div>
+    <div class="box2"><h1>박스2</h1></div>
+    <div class="box3"><h1>박스3</h1></div>
+
+    <script>
+        let 박스1 = document.querySelector('.box1')
+        let 박스2 = document.querySelector('.box2')
+        let 박스3 = document.querySelector('.box3')
+        let 시작버튼 = document.querySelector('.start')
+        let 정지버튼 = document.querySelector('.end')
+        let 이미지 = document.createElement('img')
+        이미지.setAttribute('src','')
+        
+        박스1.classList.add('box')
+        박스2.classList.add('box')
+        박스3.classList.add('box')
+
+        시작버튼.addEventListener('click', function() {
+            박스1.appendChild(이미지)
+            이미지.setAttribute('src','/1.webp')
+        })
+        정지버튼.addEventListener('click', function() {
+            if (현위치 == 1) {
+                박스1.removeChild(이미지)
+            }
+            else if (현위치 == 2) {
+                박스2.removeChild(이미지)
+            }
+            else if (현위치 == 3) {
+                박스3.removeChild(이미지)
+            }
+        })
+
+        let 현위치 = 1
+        이미지.addEventListener('mouseover', function() {
+            if (현위치 == 1) {
+                박스2.appendChild(이미지)
+                현위치 = 2
+            }
+                
+            else if (현위치 == 2) {
+                박스3.appendChild(이미지)
+                현위치 = 3
+            }
+                
+            else if (현위치 == 3) {
+                박스1.appendChild(이미지)
+                현위치 = 1
+            }
+            console.log(현위치)
+        })
+    </script>
+</body>
+</html>
