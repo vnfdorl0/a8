@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0;}
+        #dv {text-align: center; margin:0 50px;}
+        .box {float: left;}
+        .box1 {background-color: aqua; width: 200px; height: 100px;}
+        .box2 {background-color:cornflowerblue; width: 1000px; height: 100px;}
+        
+        .section {background-color: darkgoldenrod; width: 1200px; height: 300px;}
+
+        section div {width: 400px; height: 200px; float: left;}
+        .div1 {background-color:bisque;}
+        .div2 {background-color:darkseagreen;}
+        .div3 {background-color:lightblue;}
+
+        .box3 {background-color:darkolivegreen; width: 200px; height: 100px;}
+        .box4 {background-color:indianred; width: 800px; height: 100px;}
+        .box5 {background-color:khaki; width: 200px; height: 100px;}
+
+    </style>
+</head>
+<body>
+    <div id="dv">
+    <div style="clear: both;">
+        <div class="box box1"><h3>200px 100px</h3></div>
+        <div class="box box2"><h3>1000px 100px</h3></div>
+    </div>
+
+    <section class="box section" style="clear: both;">
+        <h3>1200px * 300px</h3>
+        <h3></h3>
+    </section>
+
+    <section id="sec" style="clear: both;">
+        <div class="div1"><h3>div 1 / 400px * 200px</h3></div>
+        <div class="div2"><h3>div 2 / 400px * 200px</h3></div>
+        <div class="div3"><h3>div 3 / 400px * 200px</h3></div>
+    </section>
+
+    <footer style="clear: both;">
+        <div class="box box3"><h3>200px</h3></div>
+        <div class="box box4"><h3>800px * 100px</h3></div>
+        <div class="box box5"><h3>200px</h3></div>
+    </footer>
+    </div>
+
+</body>
+</html>
