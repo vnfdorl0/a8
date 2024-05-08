@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0508과제</title>
+    <style>
+        div {border:2px solid; width: 600px; height:400px;
+        text-align:center; padding:20px;}
+    </style>
+</head>
+<body>
+    <h1>가보고 싶은 여행지(a, s, d, f)</h1>
+    <div>
+        <img src="" width="500">
+    </div>
+
+    <script>
+        let 이미지 = document.querySelector('img')
+        let 글 = document.createElement('h2')
+        let dv = document.querySelector('div')
+        dv.appendChild(글)
+
+        document.addEventListener('keydown', function(k) {
+            if (k.key == 'a') {
+                이미지.setAttribute('src','https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/shutterstock129611225huge1675509770695-1711077978542.jpg')
+                글.textContent = '일본'
+            }
+            else if (k.key == 's') {
+                이미지.setAttribute('src','https://thailove.net/data/editor/1906/654091b78dea33afa3f2e3259e65e2d4_1561179275_23.png')
+                글.textContent = '베트남'
+            }
+            else if (k.key == 'd') {
+                이미지.setAttribute('src','https://www.kkday.com/ko/blog/wp-content/uploads/CK_pc0020419636wp.jpg')
+                글.textContent = '아이슬란드'
+            }
+            else if (k.key == 'f') {
+                이미지.setAttribute('src', '')
+                글.textContent = ''
+            }
+        })
+    </script>
+</body>
+</html>
