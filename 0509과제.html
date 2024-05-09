@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0509과제</title>
+    <style>
+        * {margin:0; padding:0; box-sizing: border-box; text-align: center;}
+        li {list-style:none; display:inline-block; padding: 15px; margin:0 20px; cursor:pointer;}
+        li:hover {background-color:rgb(216, 216, 216);}
+        li:active {background-color: gray;}
+
+        .main {background-color:rgb(204, 204, 204); width:900px; 
+            margin: 20px auto; padding: 10px;}
+        section {background-color: white; width: 550px; border-radius: 20px;
+            margin: 20px auto; padding: 15px;}
+        .main section:nth-of-type(1) p {cursor:pointer; line-height:30px;}
+        .main section:nth-of-type(1) p:hover{background-color: rgb(202, 202, 202);}
+        .main section:nth-of-type(1) p:active{background-color:gray;}
+        h2 {color:darkgreen;}
+        img {width:200px;}
+        footer p {color:rgb(166, 166, 166);}
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Main</li>
+            <li>About</li>
+            <li>Top</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="main">
+        <section>
+            <h2>가상 클래스를 활용한 UI 디자인</h2>
+            <p>목표가 없는 사람은 시간을 허투로 쓴다.</p>
+            <p>물질은 내가 원하는 것을 이루기 위한 수단이지, 목표가 될 수 없다.</p>
+            <p>꿈과 직업은 서로 다르다. 달라야 한다.</p>
+            <p>어디에 가치를 두느냐에 따라 인생이 달라진다.</p>
+        </section>
+        <section>
+            <h2>사진 채우기</h2>
+            <img src="1.webp" alt="">
+            <img src="4.webp" alt="">
+            <img src="5.webp" alt="">
+            <img src="6.webp" alt="">
+        </section>
+    </div>
+    <hr>
+    <footer>
+        <p>p</p>
+        <br>
+    </footer>
+</body>
+</html>
