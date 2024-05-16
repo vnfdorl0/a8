@@ -6,21 +6,28 @@
     <title>0516과제</title>
 
     <style>
-        body{background-color: rgb(226, 226, 226);}
-        .b{background-color: white; width:1200px; border-radius:25px;}
-        section{height:400px;}
-        .sec{background-color: rgb(226, 226, 226); width:570px; height:340px;
-        float:left; margin:10px; border-radius:15px;}
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {background-color: rgb(226, 226, 226);}
+        .b {background-color: white; width:1200px; border-radius:25px; margin: 20px auto;}
+        section {height:400px; padding: 10px;}
+        .sec {background-color: rgb(226, 226, 226); width:570px; height:340px;
+        float: left; margin:10px; border-radius:15px; padding: 20px;}
+        header {text-align:center;}
 
-        header li{list-style: none; display:inline-block; border:2px gray solid; border-radius:20px;
-        padding:10px;}
-        header li:hover{border-color:green; color:green;}
-        header li:active{background-color: green; color:white;}
+        header li {list-style: none; display:inline-block; border:2px gray solid; border-radius:20px;
+        padding:10px; cursor: pointer;}
+        header li:hover {border-color:green; color:green;}
+        header li:active {background-color: green; color:white;}
 
-        .sec li{line-height:35px;}
-        .sec li::before{ content:"a"; background-color: rgb(114, 114, 114); 
-        color:white; border-radius:3px; padding:5px;}
-        td{border: 1px solid;}
+        .sec li {line-height:35px; margin:0 10px;}
+        .sec li::before { content:"a"; background-color: cornflowerblue; 
+        color:white; border-radius:3px; padding:5px; margin:0 5px;}
+        td {border: 1px solid;padding: 10px;}
+        table {border-collapse: collapse;}
+        tr:nth-of-type(odd) {background-color: beige;}
+
+        .box {width:350px; cursor: pointer; float:left; margin:0 20px;}
+        img {width: 300px;}
     </style>
 </head>
 <body>
@@ -35,44 +42,45 @@
     </header>
     <section class="b">
         <div class="sec">
+            <h2>세겨 둘 메세지</h2>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>지금 아니면 못 할 것을 하며 살아라.</li>
+                <li>사람은 저마다 갈 길이 다르다. 자기 길을 가라.</li>
+                <li>남을 돕는다고 따라가면 자기 길 못 가고 얻을 것 못 얻는다.</li>
+                <li>자랑할 것이 있게 행동해라</li>
+                <li>모든 삶의 이치는 동일하다. 1등 하려면 힘들다.</li>
+                <li>제대로 못 했어도 포기하지 말고 교정하면 되는 것도 있다.</li>
             </ul>
         </div>
         <div class="sec">
             <table>
                 <tr>
-                    <td>qwe</td>
-                    <td>qwe</td>
+                    <td>table 홀수 줄에 색깔 넣기</td>
+                    <td>table 홀수 줄에 색깔 넣기</td>
                 </tr>
                 <tr>
-                    <td>qwe</td>
-                    <td></td>
+                    <td>CSS에 tr:nth-of-type 스타일 사용</td>
+                    <td>CSS에 tr:nth-of-type 스타일 사용</td>
                 </tr>
                 <tr>
-                    <td>qwe</td>
-                    <td></td>
+                    <td>홀수는 odd</td>
+                    <td>홀수는 odd</td>
                 </tr>
                 <tr>
-                    <td>qwe</td>
-                    <td></td>
+                    <td>짝수는 even</td>
+                    <td>짝수는 even</td>
                 </tr>
                 <tr>
-                    <td>qwe</td>
-                    <td></td>
+                    <td>홀수 줄</td>
+                    <td>홀수 줄</td>
                 </tr>
             </table>
         </div>
     </section>
     <section class="b">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+        <div class="box"><img src="https://tiermaker.com/images/media/template_images/2024/16990718/hades-rng-auras-last-updated-3-27-24-16990718/screenshot-2024-03-27-194957.png"><p>a</p></div>
+        <div class="box"><img src="5.webp"><p>a</p></div>
+        <div class="box"><img src="4.webp"><p>a</p></div>
     </section>
 </body>
 </html>
