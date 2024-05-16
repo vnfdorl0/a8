@@ -4,8 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0516과제</title>
+
+    <style>
+        body{background-color: rgb(226, 226, 226);}
+        .b{background-color: white; width:1200px; border-radius:25px;}
+        section{height:400px;}
+        .sec{background-color: rgb(226, 226, 226); width:570px; height:340px;
+        float:left; margin:10px; border-radius:15px;}
+
+        header li{list-style: none; display:inline-block; border:2px gray solid; border-radius:20px;
+        padding:10px;}
+        header li:hover{border-color:green; color:green;}
+        header li:active{background-color: green; color:white;}
+
+        .sec li{line-height:35px;}
+        .sec li::before{ content:"a"; background-color: rgb(114, 114, 114); 
+        color:white; border-radius:3px; padding:5px;}
+        td{border: 1px solid;}
+    </style>
 </head>
 <body>
-    
+    <header class="b">
+        <ul>
+            <li>메뉴</li>
+            <li>공지사항</li>
+            <li>갤러리</li>
+            <li>웹디자인기능사</li>
+            <li>접수 6월 8일</li>
+        </ul>
+    </header>
+    <section class="b">
+        <div class="sec">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="sec">
+            <table>
+                <tr>
+                    <td>qwe</td>
+                    <td>qwe</td>
+                </tr>
+                <tr>
+                    <td>qwe</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>qwe</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>qwe</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>qwe</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section class="b">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </section>
 </body>
 </html>
