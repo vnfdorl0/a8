@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+
+    <style>
+        p::before{
+            content: "best";
+            background-color:deeppink;
+            color:white;
+            padding:2px;
+            border-radius: 5px;
+        }
+        p::after{
+            content: "sold out";
+            background-color: blue;
+            margin-left: 5px;
+            color:white;
+        }
+        p::selection{background-color: chocolate;}
+        p::first-letter{ /*첫번째 글자*/
+            color:chartreuse;
+        }
+        p::first-line{ /*첫번째 줄*/
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>가상요소</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
