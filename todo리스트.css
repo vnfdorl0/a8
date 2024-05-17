@@ -1,0 +1,14 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center; justify-content: space-between;
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    padding: 10px;
+}
+
+input {border: none; border-radius: 5px; padding: 5px;}
