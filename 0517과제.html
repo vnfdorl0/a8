@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0517과제</title>
+
+    <style>
+        #main {display: flex;}
+        #main > div {height: 100px;}
+        .div1 {background-color:aqua; width: 200px;}
+        .div2 {background-color:bisque; width: 500px; flex:5;
+        display: flex; justify-content: end; align-items:center;}
+        .box {background-color: cadetblue; width: 100px; height: 60px; 
+            padding:20px; box-sizing: border-box; text-align: center;}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="div1"></div>
+        <div class="div2">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+        </div>
+    </div>
+</body>
+</html>
