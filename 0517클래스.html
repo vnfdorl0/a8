@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #rab {
+            display: flex; /* flax는 부모에게 적용 */
+            justify-content: space-evenly; /* 가로조절*/
+            align-items: center; /*세로조절*/
+        }
+        .box {
+            border: 1px solid; width: 200px; height: 200px; background-color: chocolate;
+        }
+
+        .box1 {height: 100px; flex: 1; order: 2;} /*flex: 비율조절  order: 순서조절*/
+        .box2 {height: 150px; flex: 8; order: 1;}
+        .box3 {height: 200px; flex: 1; order: 3;}
+    </style>
+</head>
+<body>
+    <div id="rab">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+
+    </div>
+</body>
+</html>
