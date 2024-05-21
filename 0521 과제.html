@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {box-sizing: border-box;  margin: 0;}
+        header {
+            height: 100px; background-color: white;
+            display: flex; justify-content: space-between;
+            box-shadow: 1px 3px 5px rgb(215, 215, 215);
+        }
+        h1 {padding: 15px; margin: 10px;}
+        header div {display: flex; color:rgb(0, 0, 0);}
+        .nav h3:hover{background-color: rgb(181, 181, 181); border-radius: 10px;}
+        .nav h3 {margin: 20px; padding: 15px; cursor: pointer;}
+
+        main {display: flex; justify-content: space-between;}
+        main > div {flex: 1; margin: 20px;}
+        .nav2 {margin: 20px;}
+        .nav2 p {font-size: 14pt; padding: 10px; cursor:pointer; margin: 10px;}
+        .nav2 p:hover {background-color: rgb(181, 181, 181); border-radius: 10px;}
+
+        section {flex: 3; margin: 10px;}
+        .box {
+            background-color: white; margin: 25px; padding: 20px;
+            box-shadow: 1px 3px 5px rgb(215, 215, 215);
+        }
+        
+    </style>
+</head>
+<body style="background-color: rgb(241, 241, 241);">
+    <header>
+        <div><h1>로고</h1></div>
+        <div class="nav">
+            <h3>게시판</h3>
+            <h3>친구</h3>
+            <h3>피드</h3>
+            <h3>즐겨찾기</h3>
+        </div>
+        <div class="nav">
+            <h3>로그인</h3>
+            <h3>회원가입</h3>
+        </div>
+    </header>
+    <main>
+        <div class="nav2">
+            <p>친구찾기</p>
+            <p>그룹</p>
+            <p>저장됨</p>
+            <p>페이지</p>
+            <p>이벤트</p>
+            <p>최신</p>
+            <p>즐겨찾기</p>
+        </div>
+        <section>
+            <div class="box">
+                <h2>제목</h2>
+                <p>내용</p>
+                <img src="" alt="">
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>내용</p>
+                <img src="" alt="">
+            </div>
+        </section>
+        <div>
+            <hr>
+        </div>
+    </main>
+
+
+
+
+
+</body>
+</html>
