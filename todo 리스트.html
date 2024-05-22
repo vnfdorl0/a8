@@ -25,7 +25,45 @@
             </div>
         </section>
 
-
     </div>
+    <script>
+        // input박스에서 enter를 누르면 이벤트가 실행
+        let 입력박스 = document.querySelector('input')
+        let 섹션 = document.querySelector('section')
+
+        // 입력박스에 키보드 이벤트
+        입력박스.addEventListener('keydown', function(event) {
+            // enter누른거 구별
+            if (event.code == 'Enter') {
+                console.log('엔터 누름')
+                // input에 입력된 값 가져오기
+                console.log(입력박스.value)
+
+                //리스트에 들어갈 할 일 만들기
+                let div박스 = document.createElement('div')
+                div박스.classList.add('todo-list')
+
+                // 하트 추가
+                let p태그1 = document.createElement('p')
+                p태그1.classList.add('like')
+                p태그1.innerHTML = '<i class="material-icons">favorite_border</i>'
+                div박스.appendChild(p태그1)
+                
+                // todo 리스트의 내용에 해당하는 태그
+                let p태그2 = document.createElement('p')
+                p태그2.classList.add('content')
+                p태그2.textContent = 입력박스.value // input에 입력된 내용 가져옴
+                div박스.appendChild(p태그2)
+
+                
+
+
+                // 할일 만든거 화면에 넣어주기
+                섹션.appendChild(div박스)
+                console.log(div박스)
+
+            }
+        })
+    </script>
 </body>
 </html>
