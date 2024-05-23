@@ -23,5 +23,6 @@ input {border: none; border-radius: 5px; padding: 5px;}
 .like {flex: 1; color:rgb(252, 101, 209) ;}
 .content {flex: 8;}
 .manage {flex: 1;}
+i {cursor: pointer;}
 .check {color: rgb(59, 217, 41);}
 .clear {color:rgb(243, 22, 66);}

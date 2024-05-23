@@ -15,14 +15,7 @@
         </header>
 
         <section>
-            <div class="todo-list">
-                <p class="like"><i class="material-icons">favorite_border</i></p>
-                <p class="content">내용</p>
-                <div class="manage">
-                    <i class="material-icons check">done</i>
-                    <i class="material-icons clear">clear</i>
-                </div>
-            </div>
+            
         </section>
 
     </div>
@@ -46,8 +39,23 @@
                 // 하트 추가
                 let p태그1 = document.createElement('p')
                 p태그1.classList.add('like')
-                p태그1.innerHTML = '<i class="material-icons">favorite_border</i>'
+                
+                let i태그 = document.createElement('i')
+                i태그.classList.add('material-icons')
+                i태그.textContent = 'favorite_border'
+                p태그1.appendChild(i태그)
+
                 div박스.appendChild(p태그1)
+
+                // 하트 버튼에 이벤트 걸기
+                i태그.addEventListener('click', function() {
+                    if (i태그.textContent == 'favorite') { // 채워진 하트 라면
+                        i태그.textContent = 'favorite_border' // 테두리만 있는 하트로 변환
+                    }
+                    else { // 채워진 하트가 아니라면
+                        i태그.textContent = 'favorite' // 채워진 하트로 변환
+                    }
+                })
                 
                 // todo 리스트의 내용에 해당하는 태그
                 let p태그2 = document.createElement('p')
@@ -64,12 +72,25 @@
                 i태그1.classList.add('material-icons')
                 i태그1.classList.add('check')
                 i태그1.textContent = 'done'
+                // v태그 이벤트
+                i태그1.addEventListener('click', function() {
+                    // 글씨 색이 변하고 취소선 긋기 -> css수정
+                    p태그2.style.color = '#888' // 색 변경
+                    p태그2.style.textDecoration = 'line-through' // 취소선 긋기
+                    // i태그1.style.display = 'none' // v사라지게 하기
+                    i태그1.style.visibility = 'hidden' // v버튼 사라지게 하기
+                })
 
                 // x태그
                 let i태그2 = document.createElement('i')
                 i태그2.classList.add('material-icons')
                 i태그2.classList.add('clear')
                 i태그2.textContent = 'clear'
+
+                // x태그 클릭하면 리스트 삭제
+                i태그2.addEventListener('click', function() {
+                    섹션.removeChild(div박스)
+                })
 
                 관리div.appendChild(i태그1)
                 관리div.appendChild(i태그2)
