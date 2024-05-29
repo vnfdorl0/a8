@@ -8,9 +8,12 @@
 <body>
     <h1>애국가 타자연습</h1>
     <hr>
+    <h2>input 이벤트와 조건문 활용</h2>
+    <h3>값을 입력하면 점검</h3>
     <label id="label1">동해물과 <input type="text" id="input1"></label><br>
     <label id="label2">백두산이 <input type="text" id="input2"></label>
-    <h2></h2>
+    <h2>키보드 이벤트 활용</h2>
+    <h3>Enter 누르면 확인</h3>
     <label id="label3">마르고 <input type="text" id="input3"></label><br>
     <label id="label4">닳도록 <input type="text" id="input4"></label>
 
@@ -47,19 +50,23 @@
             }
             else {표시2.textContent = ' ok'}
         })
-        입력3.addEventListener('input', (e) => {
-            표시3.textContent = ''
-            if (e.target.value != '마르고') {
-                표시3.textContent = ' x'
-            }
-            else {표시3.textContent = ' ok'}
+        입력3.addEventListener('keydown', (e) => {
+            if (e.key == 'Enter') {
+                표시3.textContent = ''
+                if (입력3.value != '마르고') {
+                    표시3.textContent = ' x'
+                }
+                else {표시3.textContent = ' ok'}
+            }  
         })
-        입력4.addEventListener('input', (e) => {
-            표시4.textContent = ''
-            if (e.target.value != '닳도록') {
-                표시4.textContent = ' x'
-            }
-            else {표시4.textContent = ' ok'}
+        입력4.addEventListener('keydown', (e) => {
+            if (e.key == 'Enter') {
+                표시4.textContent = ''
+                if (입력4.value != '닳도록') {
+                    표시4.textContent = ' x'
+                }
+                else {표시4.textContent = ' ok'}
+            }  
         })
     </script>
 </body>
