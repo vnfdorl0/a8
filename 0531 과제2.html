@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0531과제2</title>
+</head>
+<body>
+    <h1>주문서</h1>
+    <h3>먹고 싶은 메뉴를 선택합니다</h3>
+    <div>
+        <label><input type="checkbox" value="1" id="ch1"> 치킨 16000</label><br>
+        <label><input type="checkbox" value="2" id="ch2"> 초밥 20000</label><br>
+        <label><input type="checkbox" value="3" id="ch3"> 순대 5000</label>
+    </div>
+    <hr>
+    <h2>가격: </h2>
+
+    <script>
+        const h2태그 = document.querySelector('h2')
+        let 가격표시 = document.createElement('span')
+        h2태그.appendChild(가격표시)
+        let 합 = 0
+        가격표시.textContent = 합
+        
+
+        const 태그 = document.querySelector('#ch1')
+        태그.addEventListener('change', () => {
+            가격표시.textContent = ''
+            if (태그.checked == true) {
+                합 += 16000
+            }
+            else {
+                합 -= 16000
+            }
+            가격표시.textContent = 합
+        })
+        const 태그2 = document.querySelector('#ch2')
+        태그2.addEventListener('change', () => {
+            가격표시.textContent = ''
+            if (태그2.checked == true) {
+                합 += 20000
+            }
+            else {
+                합 -= 20000
+            }
+            가격표시.textContent = 합
+        })
+        const 태그3 = document.querySelector('#ch3')
+        태그3.addEventListener('change', () => {
+            가격표시.textContent = ''
+            if (태그3.checked == true) {
+                합 += 5000
+            }
+            else {
+                합 -= 5000
+            }
+            가격표시.textContent = 합
+        })
+
+    </script>
+</body>
+</html>
