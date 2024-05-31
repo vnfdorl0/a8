@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0531과제</title>
+
+    <style>
+        .box {width: 200px; height: 20px; border: 1px solid black; display: inline-block;}
+    </style>
+</head>
+<body>
+    <h1>단위 변환</h1>
+    <label for=""><input type="text"> cm</label>
+    <br><br>
+    <div>
+        <div class="box"></div>
+        <select name="" id="">
+            <option value="inch">inch</option>
+            <option value="mm">mm</option>
+            <option value="m">m</option>
+        </select>
+    </div>
+
+    <script>
+        const 입력 = document.querySelector('input')
+        let 선택 = document.querySelector('select')
+        let 변환 = document.createElement('span')
+        let 박스 = document.querySelector('.box')
+        박스.appendChild(변환)
+
+        선택.addEventListener('change', () => {
+            변환.textContent = ''
+            let cm = 입력.value
+            
+            if (선택.value == 'inch') {
+                변환.textContent = cm * 0.4
+            }
+            else if (선택.value == 'mm') {
+                변환.textContent = cm * 10
+            }
+            else if (선택.value == 'm') {
+                변환.textContent = cm * 0.01
+            }
+        })
+    </script>
+</body>
+</html>
