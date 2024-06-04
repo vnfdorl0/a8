@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8_조은영</title>
+
+    <style>
+        #main_div {margin-left: auto; margin-right: auto; width: 80%;}
+
+        header {display: flex; justify-content:space-between;}
+        h2 {cursor: pointer;}
+        input {border: 0px; padding: 10px; border-radius: 10px;}
+        button {
+            background-color: goldenrod; border-radius: 10px; padding: 5px; border: 0px;
+            cursor: pointer;
+        }
+        header img {border-radius: 50%; cursor: pointer; position: relative; bottom: -13px;}
+
+        .grid {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:10px;}
+        .item {
+            height: 360px; border-radius: 10px;
+            cursor: pointer; background-color: white;
+        }
+        .item img {height: 280px; border-radius: 10px; width: 100%;}
+        .item p {margin: 5px;}
+
+        .menu {
+            background-color: goldenrod; display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr; margin: 10px 0;
+        }
+        .menu p {cursor: pointer; text-align: center; margin:0; padding: 15px;}
+        .menu p:hover {background-color: rgb(244, 191, 59);}
+
+        footer {border-radius: 10px; background-color: white; text-align: center; margin-top: 10px;}
+        footer p {margin-top: 10px;}
+    </style>
+</head>
+<body style="background-color: #efefef;">
+    <div id="main_div">
+        <header>
+            <h2>로고</h2>
+            <div>
+                <input type="text" placeholder="검색어 입력">
+                <button>버튼</button>
+                <img src="https://i.crepe.land/https://crepe.land/portfolio/q/qe/qenpmy8g9uzxsmqi0q4u5qw7ijk0y954_%EC%97%85%EB%A1%9C%EB%93%9C%EC%9A%A93.jpg?q=100&t=i&v=3a&w=800" alt="" width="40px" height="40px">
+            </div>
+        </header>
+        <div class="menu">
+            <p>메뉴1</p>
+            <p>메뉴2</p>
+            <p>메뉴3</p>
+            <p>메뉴4</p>
+        </div>
+        <div class="grid">
+            <div class="item">
+                <img src="https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13239501&filePath=L2Rpc2sxL25ld2RhdGEvMjAyMC85OC9DTFMxMDAwNC8xMzIzOTUwMV9XUlRfMjAyMDAxMTZfMQ==&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10004" alt="">
+                <p>어떤 일이든 한계점이 있다.</p>
+            </div>
+            <div class="item">
+                <img src="https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=11288734&filePath=L2Rpc2sxL25ld2RhdGEvMjAxNS8wMi9DTFM2OS9OVVJJXzAwMV8wMjIwX251cmltZWRpYV8yMDE1MTIwMw==&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10006" alt="">
+                <p>세상에 안되는 사람은 없다.</p>
+            </div>
+            <div class="item">
+                <img src="https://img.lovepik.com/background/20211022/large/lovepik-spring-background-image_401902416.jpg" alt="">
+                <p>소질은 누구나 있다.</p>
+            </div>
+            <div class="item">
+                <img src="https://img.lovepik.com/background/20211021/large/lovepik-spring-background-image_401688437.jpg" alt="">
+                <p>조금만 더 하면 되는데 끝까지 못하고 직전에 그만두는 사람이 너무 많다.</p>
+            </div>
+            <div class="item">
+                <img src="https://img.lovepik.com/background/20211021/large/lovepik-spring-background-image_401686071.jpg" alt="">
+                <p></p>
+            </div>
+            <div class="item">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <div class="item">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <div class="item">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            
+        </div>
+        <footer>
+            <p>조은영</p>
+        </footer>
+    </div>
+</body>
+</html>
