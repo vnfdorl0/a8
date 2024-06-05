@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header h1 {background-color: cornflowerblue;}
+        .main {text-align: center;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>날씨검색</h1>
+        <select name="" id="">
+            <option value="seoul">서울</option>
+            <option value="busan">부산</option>
+            <option value="tokyo">도쿄</option>
+            <option value="osaka">오사카</option>
+            <option value="kyoto">교토</option>
+            <option value="barcelona">바르셀로나</option>
+        </select>
+    </header>
+
+    <div class="main">
+        <p class="city">도시이름</p>
+
+        <h1><span class="temp"></span><span>˚C</span></h1>
+
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
+
+        <p>체감 온도 : <span class="feel"></span></p>
+        <p>습도 : <span class="humidity"></span></p>
+    </div>
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        let 선택한도시
+        let 셀렉 = document.querySelector('select')
+        셀렉.addEventListener('change', function(event) {
+            console.log(event.target.value)
+            선택한도시 = event.target.value
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${선택한도시}&appid=247b57b92b930e7d0aa60939843a7892`)
+            .then(function (response) {
+                // 성공 핸들링
+                console.log(response);
+                console.log(response.data.main)
+
+                let 도시이름 = document.querySelector('.city')
+                도시이름.textContent = response.data.name
+
+                console.log('체감온도', response.data.main.feels_like-273)
+                let 체감온도 = (response.data.main.feels_like-273).toFixed(2)
+                let 체감온도지정 = document.querySelector('.feel')
+                체감온도지정.textContent = 체감온도
+
+                console.log('온도', response.data.main.humidity)
+                let 습도 = response.data.main.humidity
+                let 습도지정 = document.querySelector('.humidity')
+                습도지정.textContent = 습도
+
+                console.log('기온', response.data.main.temp-273)
+                let 기온 = (response.data.main.temp-273).toFixed(2)
+                let 기온지정 = document.querySelector('.temp')
+                기온지정.textContent = 기온
+
+                console.log('아이콘 코드', response.data.weather[0].icon)
+                let 아이콘코드 = response.data.weather[0].icon
+
+                let 날씨아이콘 = document.querySelector('img')
+                날씨아이콘.setAttribute('src', `https://openweathermap.org/img/wn/${아이콘코드}@2x.png`)
+            })
+        })
+
+        // 지정된 ID를 가진 유저에 대한 요청
+        
+    </script>
+</body>
+</html>
