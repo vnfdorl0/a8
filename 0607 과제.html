@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="생년.월.일">
+    <button>버튼</button>
+    <script>
+        const 입력 = document.querySelector('input')
+        const 버튼 = document.querySelector('button')
+
+        버튼.addEventListener('click', function() {
+            let 생년월일 = 입력.value.split('.')
+            console.log(생년월일)
+            let 년도 = 생년월일.slice(0,1)
+            let 월 = 생년월일.slice(1,2)
+            let 일 = 생년월일.slice(2)
+            
+            if (년도 <= 2004) {
+                console.log('가능')
+            }
+            else if (년도 == 2005) {
+                if (월 <= 6 && 일 <= 7) {
+                    console.log('가능')
+                }
+                else {
+                    console.log('')
+                }
+            }
+            
+
+        })
+    </script>
+</body>
+</html>
