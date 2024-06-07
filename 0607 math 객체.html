@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let 숫자 = 3.14
+
+        // 반올림 올림 내림
+
+        console.log(숫자, "내림 floor : ", Math.floor(숫자)) // floor: 바닥, 내림
+        console.log(숫자, '올림 ceil : ', Math.floor(숫자)) // ceil: 천장, 올림
+        console.log(숫자, '반올림 round : ', Math.floor(숫자)) // round: 반올림
+
+        // 랜덤 Math.random() 0 ~ 0.9999999 사이의 숫자를 생성
+        console.log(Math.random())
+
+        console.log(Math.floor(Math.random()*10))
+        // 0 ~ 0.9999999  ->  1~10
+        // *10  ->  0~9.9999999
+        // +1  ->  1 ~ 10.9999999
+        //내림 floor -> 1 ~ 10
+
+        console.log("절대값 -5 = ", Math.abs(-5)) // 절대값: 숫자의 크기
+
+        // 최소 최대
+        console.log(Math.min(1,2,3,4,5))
+        console.log(Math.max(5,235,6,547,458,4694,87))
+
+        // 제곱
+        console.log(Math.pow(2,16))
+
+        // 제곱 근 -> square root
+        console.log(Math.sqrt(25))
+
+    </script>
+</body>
+</html>
