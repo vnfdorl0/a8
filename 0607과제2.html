@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>과제</title>
+    <style>
+        div {width: 700px; display: flex; justify-content: space-around;}
+        #d1 {background-color: rgb(215, 215, 215); height: 40px;}
+        span {
+            padding: 0 20px; text-align: center; display: inline-block;
+            width: 30px;
+        }
+        
+
+        #d2 {background-color: rgb(233, 233, 233); height: 70px;}
+
+    </style>
 </head>
 <body>
-    
+    <div id="d1">
+        <span>1번</span>
+        <span>2번</span>
+        <span>3번</span>
+        <span>4번</span>
+        <span>5번</span>
+        <span>6번</span>
+    </div>
+    <div id="d2">
+        
+    </div>
+
+    <script>
+        const 번호 = document.querySelector('#d2')
+        
+        let n = 1
+        let l = []
+        while (n <= 6) {
+            let a = Math.floor(Math.random()*45)
+            if (!l.includes(a)) {
+                l.push(a)
+                n+=1
+                let b = document.createElement('span')
+                b.textContent = a
+                번호.appendChild(b)
+            }
+        }
+        
+    </script>
 </body>
 </html>
