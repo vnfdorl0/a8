@@ -5,32 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0611과제</title>
     <style>
-        #div {
-            text-align: center; display: grid; grid-template-columns: 1fr 320px 1fr;
-            
-        } 
+        #div {text-align: center; display: grid; grid-template-columns: 1fr 320px 1fr;} 
         .box {
-            border: 1px solid black; width: 300px; height: 200px;
-            position: relative; overflow: hidden;
+            border: 1px solid rgb(183, 183, 183); width: 300px; height: 200px;
+            position: relative; overflow: hidden; background-color: rgb(253, 234, 167);
         }
-        
-        .b_div { background-color: black; width: 300px; height: 200px; 
-            position: absolute; top: 200px; transition: top 0.5s ease;
-            position: absolute; top: 200px; opacity: 0.1;}
-        .box:hover .b_div{top: 0;}
+
+        .p_div {position: absolute; top: 200px; transition: top 0.5s ease; text-align: center;}
+        .back_div {background-color: black; height: 200px; width: 300px; opacity:0; transition: opacity 0.3s ease-in}
+        .box:hover .p_div{top: 0;}
+        .box:hover .back_div {opacity: 0.5;}
     </style>
 </head>
 <body>
     <div id="div">
         <div class="box" style="justify-self: end;">
-            <div class="b_div"></div>
+            <div class="p_div"><div class="back_div"></div></div>
         </div>
         
         <div class="box" style="justify-self: center;">
-            <div></div>
+            <div class="p_div"><div class="back_div"></div></div>
         </div>
         <div class="box" style="justify-self: start;">
-            <div></div>
+            <div class="p_div"><div class="back_div"></div></div>
         </div>
         
     </div>
