@@ -5,30 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0611과제</title>
     <style>
-        #div {text-align: center; display: grid; grid-template-columns: 1fr 320px 1fr;} 
+        * {margin: 0;}
+        #div {text-align: center; display: flex; justify-content: center;} 
         .box {
             border: 1px solid rgb(183, 183, 183); width: 300px; height: 200px;
-            overflow: hidden; background-color: rgb(253, 234, 167); margin:0 5px;
+            overflow: hidden; background-color: rgb(253, 234, 167);
         }
 
-        .p_div {transform: translate(0px, 200px); transition: transform 0.4s ease; text-align: center;}
-        .back_div {background-color: black; height: 200px; width: 300px; opacity:0; 
-            transition: opacity 0.3s ease-in}
+        .p_div {transform: translate(0px, 200px); transition: transform 0.4s ease;
+            text-align: center;}
+        .back_div {
+            background-color: black; height: 200px; width: 300px; opacity:0; 
+            transition: opacity 0.3s ease-in; color:white;
+        }
         .box:hover .p_div{transform: translate(0px, 0px);}
-        .box:hover .back_div {opacity: 0.5;}
+        .box:hover .back_div {opacity: 0.4;}
     </style>
 </head>
 <body>
     <div id="div">
-        <div class="box" style="justify-self: end;">
-            <div class="p_div"><div class="back_div"></div></div>
+        <div class="box" style="background-image: url();">
+            <div class="p_div">
+                <div class="back_div">
+                    <p></p>
+                </div>
+            </div>
         </div>
         
-        <div class="box" style="justify-self: center;">
-            <div class="p_div"><div class="back_div"></div></div>
+        <div class="box" style="margin: 0 10px; background-image: url();">
+            <div class="p_div">
+                <div class="back_div">
+                    <p></p>
+                </div>
+            </div>
         </div>
-        <div class="box" style="justify-self: start;">
-            <div class="p_div"><div class="back_div"></div></div>
+
+        <div class="box" style="background-image: url();">
+            <div class="p_div">
+                <div class="back_div">
+                    <p></p>
+                </div>
+            </div>
         </div>
         
     </div>
