@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0611과제</title>
+    <style>
+        #div {
+            text-align: center; display: grid; grid-template-columns: 1fr 320px 1fr;
+            
+        } 
+        .box {
+            border: 1px solid black; width: 300px; height: 200px;
+            position: relative; overflow: hidden;
+        }
+        
+        .b_div { background-color: black; width: 300px; height: 200px; 
+            position: absolute; top: 200px; transition: top 0.5s ease;
+            position: absolute; top: 200px; opacity: 0.1;}
+        .box:hover .b_div{top: 0;}
+    </style>
+</head>
+<body>
+    <div id="div">
+        <div class="box" style="justify-self: end;">
+            <div class="b_div"></div>
+        </div>
+        
+        <div class="box" style="justify-self: center;">
+            <div></div>
+        </div>
+        <div class="box" style="justify-self: start;">
+            <div></div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
