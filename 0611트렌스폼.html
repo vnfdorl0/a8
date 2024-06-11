@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: cornflowerblue; width: 100px; height: 50px; 
+            border: 1px solid black; margin: 20px;
+        }
+        .translate {transform: translate(50px, 50px);} /*위치변경*/
+        .rotate {transform: rotate(90deg);}
+        .scale {transform: scale(1.5);}
+        .skew {transform: skew(50deg);}
+
+        body {position: relative;}
+        .usage {position:absolute; left:50%; top: 50%;
+            transform: translate(-50%, -50%);}
+
+        .transition {transition: background-color 1s ease 2s;}
+        .transition:hover {background-color: tomato;}
+    </style>
+</head>
+<body>
+    <h2>transform : 디자인 바꾸는 것</h2>
+    <div class="translate">translate</div>
+    <div class="rotate">rotate</div>
+    <div class="scale">scale</div>
+    <div class="skew">skew</div>
+
+    <div class="usage">용도</div>
+
+    <div class="transition"></div>
+</body>
+</html>
