@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8_조은영</title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <div>
+        <select name="" id="chose">
+            <option value="">도시 선택</option>
+            <option value="seoul">서울</option>
+            <option value="busan">부산</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+        <p id="c_name">도시이름</p>
+        <p>현재 온도: <span id="temp"></span></p>
+        <p>체감 온도: <span id="feels"></span></p>
+        <p>풍속: <span id="speed"></span></p>
+        <p>습도: <span id="humidity"></span></p>
+        <img src="" alt="">
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const 선택 = document.querySelector("#chose")
+        선택.addEventListener("change", function() {
+            const 도시이름 = document.querySelector('#c_name')
+            도시이름.textContent = 선택.value
+
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${선택.value}&appid=247b57b92b930e7d0aa60939843a7892`)
+            .then(function(response) {
+                // 날씨 데이터
+                console.log(response)
+                console.log(response.data.main)
+                console.log(response.data.main.temp - 275) //현재 온도
+                console.log(response.data.main.feels_like - 275) //체감 온도
+                console.log(response.data.wind.speed) //풍속
+                console.log(response.data.main.humidity) //습도
+
+                // 날씨 출력
+                const 현재온도 = document.querySelector("#temp")
+                현재온도.textContent = (response.data.main.temp - 275).toFixed(1)
+                const 체감온도 = document.querySelector("#feels")
+                체감온도.textContent = (response.data.main.feels_like - 275).toFixed(1)
+                const 풍속 = document.querySelector("#speed")
+                풍속.textContent = response.data.wind.speed
+                const 습도 = document.querySelector("#humidity")
+                습도.textContent = response.data.main.humidity
+        })
+        })
+
+        
+    </script>
+</body>
+</html>
