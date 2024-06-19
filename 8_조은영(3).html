@@ -7,7 +7,7 @@
     <style>
         * {box-sizing: border-box; margin: 0;}
         body {
-            background:linear-gradient(to bottom,#4a84cb, #76c4fb, #76cffb, #ffffff);
+            background:linear-gradient(to bottom,#4a84cb, #76c4fb, #76cffb, #eaf1ff);
             background-repeat: no-repeat; 
         }
 
@@ -37,21 +37,19 @@
             font-weight:600;
         }
         section { display: flex; justify-content: center;}
-        /*section > div {border: black 1px solid;} margin: 0 20px; */
+        section > div {margin-right: 30px;}/* border: black 1px solid; */
         .p {font-size: 28px; line-height: 50px;}
         #w_box1 {
-            text-align: center; margin-right: 10px;
+            text-align: center; 
             width: 350px; height: 400px;
         } 
         #w_box2 {
             background-color: #caedff; border-radius: 10px;
-            width: 300px; height: 200px;
+            width: 280px; height: 200px;
             padding: 20px 20px; margin-top: 80px;
-            
         }
-        img {transform: translate(-80px, -60px);}
-        .w {transform: translate(0, -140px);}
-        
+        img {transform: translate(-65px, -60px);}
+        .w {transform: translate(0, -120px);}
         
     </style>
 </head>
@@ -72,7 +70,7 @@
         <p id="city_name">도시이름</p>
         <section>
             <div id="w_box1">
-                <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="" width="500px">
+                <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="" width="480px">
                 <p class="p w">현재 온도: <span id="temp"></span>˚</p>
             </div>
             <div id="w_box2">
