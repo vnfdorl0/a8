@@ -17,6 +17,7 @@
             color: rgb(255, 255, 255); 
             font-size: 35px; font-weight: 600;
             text-shadow: 2px 3px 4px rgb(46, 65, 92);
+            letter-spacing: 5px;
         }
         #chose {
             border-radius: 12px; border: 2px solid black;
@@ -27,7 +28,7 @@
 
         #weather {
             width: 830px; height: 550px; 
-            margin:10% auto; 
+            margin: 10% auto;
             background-color: rgba(130, 220, 255, 0.352);
             border-radius: 30px; padding: 20px;
             border: 5px solid rgb(42, 107, 186);
@@ -87,7 +88,6 @@
         const 선택 = document.querySelector("#chose")
         선택.addEventListener("change", function() {
             const 도시이름 = document.querySelector('#city_name')
-            도시이름.textContent = "도시이름"
 
             const 현재온도 = document.querySelector("#temp")
             const 체감온도 = document.querySelector("#feels")
@@ -97,6 +97,7 @@
             let 아이콘 = document.querySelector("img")
 
             if (선택.value == "city_chose") {
+                도시이름.textContent = "도시이름"
                 현재온도.textContent = ""
                 체감온도.textContent = ""
                 풍속.textContent = ""
@@ -106,6 +107,7 @@
             else{
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${선택.value}&appid=247b57b92b930e7d0aa60939843a7892`)
                 .then(function(response) {
+                    도시이름.textContent = 선택.value
                     // 날씨 데이터
                     console.log(response)
                     console.log(response.data.main)
