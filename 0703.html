@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px; height: 200px; background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        let 박스 = document.querySelector('.box')
+
+        // setInterval: Interval: 간격
+        let time = 1
+        let = 간격함수 = setInterval(function(){
+            console.log(time)
+            time+=1
+
+            박스.textContent = `${time}초`
+        }, 1000)
+        clearInterval(간격함수)
+
+        // setTimeout
+        let 초 = 5
+        let 타임아웃함수 = setTimeout(function(){
+            alert(`${초}초 지났음`)
+        }, 5000)
+        clearInterval(타임아웃함수)
+
+        
+    </script>
+</body>
+</html>
