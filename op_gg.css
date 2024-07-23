@@ -1,0 +1,79 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {background-color: rgb(234, 234, 234);}
+
+.container {margin: 0 auto; width: 1000px;}
+.container section {
+    background-color: #fff; margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* 검색메뉴 */
+.search_menu {
+    height: 70px; padding: 10px;
+}
+.search_menu .search_bar {
+    width: 50%; height: 50px;
+    border: 1px solid #000; border-radius: 40px;
+    margin: 0 auto;
+    display: flex; justify-content: space-around;
+}
+.search_menu .search_bar input {
+    border: none;
+    border-right: 1px solid #000;
+    font-size: 15pt;
+    width: 150px; height: 40px; text-align: center;
+}
+.search_button {
+    background-color: skyblue;
+    border: none; width: 70px; height: 40px; border-radius: 25px;
+    font-weight: 900; font-size: 15pt;
+    cursor: pointer;
+}
+
+/* 플레이여 정보 메뉴 */
+.player_menu {
+    height: 130px; padding: 15px;
+    display: flex;
+}
+
+.player {flex: 3; display: flex;}
+.solo {flex: 2;}
+.flex {flex: 2;}
+
+.player img {width: 100px;}
+.solo img {width: 75px;}
+.flex img {width: 75px;}
+
+/* 20개 게임 요약 메뉴 */
+.summary_menu {
+    display: flex; justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+}
+.record{flex: 1; border-right: 1px solid #000;}
+.lately_champion{flex: 1; border-right: 1px solid #000;}
+.lately_position {flex: 1;}
+.lately_position > div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* 20개 게임 메뉴 */
+.game20_menu {padding: 20px; text-align: center;}
+.game {display: flex; align-items: center; padding: 10px;}
+.victory {background-color: skyblue;}
+.defeat {background-color: rgb(234, 179, 197);}
+
+.mod {flex: 1;}
+.champion {flex: 1;}
+.champion img {width: 50px;}
+.multikill {flex: 1;}
+.runs {flex: 1;}
+.runs img {width: 30px;}
+.score {flex: 2;}
+.score .kda {font-size: 20pt; font-weight: 900;}
+.score .death {color: red;}
+.item {flex: 1;}
+.item img {width: 25px;}
+.users {flex: 1; display: flex; justify-content: space-between;}
