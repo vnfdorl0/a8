@@ -10,8 +10,8 @@
     <div class="container">
         <section class="search_menu">
             <div class="search_bar">
-                <input type="text" placeholder="이름">
-                <input type="text" placeholder="태그">
+                <input type="text" placeholder="이름" class="name" value="아기토끼">
+                <input type="text" placeholder="태그" class="tag" value="냐영토끼">
                 <button class="search_button">검색</button>
             </div>
         </section>
@@ -20,8 +20,8 @@
             <div class="player">
                 <img src="" alt="프사">
                 <div class="player_info">
-                    <h3>닉네임</h3>
-                    <h3>level <span>100</span></h3>
+                    <h1>닉네임</h1>
+                    <h2>level <span>100</span></h2>
                 </div>
             </div>
             <div class="solo">
@@ -72,7 +72,7 @@
         </section>
 
         <section class="game20_menu">
-
+            
             <div class="game">
                 <div class="mod">
                     <span></span>
@@ -114,8 +114,77 @@
         </section>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
+        const api_key = 'RGAPI-e8ad9250-12e1-4039-86ca-578973c08c76'
+        let 닉네임 = document.querySelector('.name')
+        let 태그 = document.querySelector('.tag')
+        let puuid
+        let 레벨
+        let 프사번호
+        let id
+
+        
         // 검색버튼에 클릭 이벤트 적용
+        const 검색버튼 = document.querySelector('.search_button')
+        검색버튼.addEventListener('click',async function() {
+            // 지정된 ID를 가진 유저에 대한 요청
+            await axios.get(`https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${닉네임.value}/${태그.value}?api_key=${api_key}`)
+            .then(function (response) {
+                // 성공 핸들링
+            puuid = response.data.puuid
+                console.log(puuid);
+            })
+            .catch(function (error) {
+                // 에러 핸들링
+                console.log(error);
+            })
+
+            await axios.get(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${api_key}`)
+            .then(function (response) {
+                // 성공 핸들링
+                console.log(response);
+                레벨 = response.data.summonerLevel
+                프사번호 = response.data.profileIconId
+                id = response.data.id
+                console.log(레벨, 프사번호, id)
+
+                document.querySelector('.player_info > h2 span').textContent = 레벨 // 레벨 변경
+                document.querySelector('.player > img').setAttribute('src', `https://opgg-static.akamaized.net/meta/images/profile_icons/profileIcon${프사번호}.jpg`)
+            })
+            
+            await axios.get(`https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=${api_key}`)
+            .then(function (response) {
+                // 성공 핸들링
+                console.log(response)
+                if (response.data != undefined) {
+                    const 솔랭이미지 = document.querySelector('.solo > img')
+                
+                    솔랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${response.data[0].tier}.png`)
+                    document.querySelector('.solo  .win').textContent = response.data[0].wins
+                    document.querySelector('.solo .lose').textContent = response.data[0].losses
+                    document.querySelector('.solo .rate').textContent = (response.data[0].wins / (response.data[0].wins + response.data[0].losses) * 100).tofixed(2)
+                }
+                if (response.data != undefined  && response.data[1].queueType == 'RANKED_FLEX_SR') {
+                    const 자랭이미지 = document.querySelector('.flex > img')
+                
+                    자랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${response.data[1].tier}.png`)
+                    document.querySelector('.flex .win').textContent = response.data[1].wins
+                    document.querySelector('.flex .lose').textContent = response.data[1].losses
+                }
+                else if (response.data != undefined  && response.data[1].queueType == 'CHERRY') {
+                    const 자랭이미지 = document.querySelector('.flex > img')
+                
+                    자랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${response.data[1].tier}.png`)
+                    document.querySelector('.flex .win').textContent = response.data[1].wins
+                    document.querySelector('.flex .lose').textContent = response.data[1].losses
+                }
+            })
+            
+        })
+
+        
+
     </script>
 </body>
 </html>
