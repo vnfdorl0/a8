@@ -39,7 +39,7 @@
         <section class="summary_menu">
             <div class="recode">
                 전적
-                <h2><span class="win">0</span>승 <span class="lose">0</span>패 <span class="drow">0</span>무 / <span class="rate">0</span>%</h2>
+                <h2><span class="win">0</span>승 <span class="lose">0</span>패 <span class="draw">0</span>무 / <span class="rate">0</span>%</h2>
                 <h2><span class="">0</span></h2>
                 <p><span class="">0</span>/<span class="">0</span>/<span class="">0</span></p>
             </div>
@@ -53,7 +53,7 @@
                     <br>
                     <span></span>
                 </div>
-                <div class="juggle">
+                <div class="jungle">
                     <img src="" alt="정글">
                     <br>
                     <span></span>
@@ -68,39 +68,52 @@
                     <br>
                     <span></span>
                 </div>
+                <div class="etc">
+                    <img src="" alt="">
+                    <br>
+                    <span></span>
+                </div>
             </div>
         </section>
 
         <section class="game20_menu">
-            
             <div class="game">
+                <div class="mode">게임모드</div>
+                <div class="champion">챔피언</div>
+                <div class="multikill">멀티킬</div>
+                <div class="rune">룬</div>
+                <div class="score">KDA CS</div>
+                <div class="item">아이템</div>
+                <div class="users">유저들</div>
+            </div>
+            <div class="game victory">
                 <div class="mod">
-                    <span></span>
+                    <span>모드</span>
                 </div>
                 <div class="champion">
                     <img src="" alt="">
-                    <p>이름 <span>000</span></p>
+                    <p>레벨 <span>0</span></p>
                 </div>
                 <div class="multikill">
-
+                    멀티킬
                 </div>
-                <div class="runs">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                <div class="rune">
+                    <img src="" alt="룬1">
+                    <img src="" alt="룬2">
                 </div>
                 <div class="score">
-                    <p><span class="kill">0</span>/<span class="death">0</span>/<span class="">0</span></p>
+                    <p><span class="kda">0</span> <span class="kill">0</span>/<span class="death">0</span>/<span class="assist">0</span></p>
                     <p>GOLD <span class="gold">0</span></p>
-                    <p><span class="kda">0</span></p>
+                    <p>CS <span class="kda">0</span></p>
                 </div>
                 <div class="item">
-                    <img src="" alt="" class="item1">
-                    <img src="" alt="" class="item2">
-                    <img src="" alt="" class="item3">
-                    <img src="" alt="" class="item4">
-                    <img src="" alt="" class="item5">
-                    <img src="" alt="" class="item6">
-                    <img src="" alt="" class="item7">
+                    <img src="" alt="1" class="item1">
+                    <img src="" alt="2" class="item2">
+                    <img src="" alt="3" class="item3">
+                    <img src="" alt="4" class="item4">
+                    <img src="" alt="5" class="item5">
+                    <img src="" alt="6" class="item6">
+                    <img src="" alt="7" class="item7">
                 </div>
                 <div class="users">
                     <p class="user1">유저</p>
@@ -116,7 +129,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        const api_key = 'RGAPI-e8ad9250-12e1-4039-86ca-578973c08c76'
+        const api_key = 'RGAPI-28e3a735-c398-407a-a9c5-23f9d0a98503'
         let 닉네임 = document.querySelector('.name')
         let 태그 = document.querySelector('.tag')
         let puuid
@@ -163,7 +176,7 @@
                     솔랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${response.data[0].tier}.png`)
                     document.querySelector('.solo  .win').textContent = response.data[0].wins
                     document.querySelector('.solo .lose').textContent = response.data[0].losses
-                    document.querySelector('.solo .rate').textContent = (response.data[0].wins / (response.data[0].wins + response.data[0].losses) * 100).tofixed(2)
+                    document.querySelector('.solo .rate').textContent = (response.data[0].wins / (response.data[0].wins + response.data[0].losses) * 100).toFixed(2)
                 }
                 if (response.data != undefined  && response.data[1].queueType == 'RANKED_FLEX_SR') {
                     const 자랭이미지 = document.querySelector('.flex > img')
@@ -171,6 +184,7 @@
                     자랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${response.data[1].tier}.png`)
                     document.querySelector('.flex .win').textContent = response.data[1].wins
                     document.querySelector('.flex .lose').textContent = response.data[1].losses
+                    document.querySelector('.flex .rate').textContent = (response.data[1].wins / (response.data[1].wins + response.data[1].losses) * 100).toFixed(2)
                 }
                 else if (response.data != undefined  && response.data[1].queueType == 'CHERRY') {
                     const 자랭이미지 = document.querySelector('.flex > img')
@@ -178,6 +192,7 @@
                     자랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${response.data[1].tier}.png`)
                     document.querySelector('.flex .win').textContent = response.data[1].wins
                     document.querySelector('.flex .lose').textContent = response.data[1].losses
+                    document.querySelector('.flex .rate').textContent = (response.data[1].wins / (response.data[1].wins + response.data[1].losses) * 100).toFixed(2)
                 }
             })
             

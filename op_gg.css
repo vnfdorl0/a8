@@ -69,8 +69,8 @@ body {background-color: rgb(234, 234, 234);}
 .champion {flex: 1;}
 .champion img {width: 50px;}
 .multikill {flex: 1;}
-.runs {flex: 1;}
-.runs img {width: 30px;}
+.rune {flex: 1;}
+.rune img {width: 30px;}
 .score {flex: 2;}
 .score .kda {font-size: 20pt; font-weight: 900;}
 .score .death {color: red;}
