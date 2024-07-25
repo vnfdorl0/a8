@@ -71,9 +71,9 @@ body {background-color: rgb(234, 234, 234);}
 .multikill {flex: 1;}
 .rune {flex: 1;}
 .rune img {width: 30px;}
-.score {flex: 2;}
+.score {flex: 1;}
 .score .kda {font-size: 20pt; font-weight: 900;}
 .score .death {color: red;}
-.item {flex: 1;}
+.item {flex: 2;}
 .item img {width: 25px;}
-.users {flex: 1; display: flex; justify-content: space-between;}
+.users {flex: 1; } /*display: flex; justify-content: space-between;*/
