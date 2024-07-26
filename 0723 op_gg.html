@@ -40,8 +40,8 @@
             <div class="record">
                 전적
                 <h2><span class="win">0</span>승 <span class="lose">0</span>패 <span class="draw">0</span>무 / <span class="rate">0</span>%</h2>
-                <h2><span class="">0</span></h2>
-                <p><span class="">0</span>/<span class="">0</span>/<span class="">0</span></p>
+                <h2><span class="kda">0</span></h2>
+                <p><span class="kill">0</span>/<span class="death">0</span>/<span class="assist">0</span></p>
             </div>
             <div class="lately_champion">
                 최근 챔피언
@@ -68,8 +68,13 @@
                     <br>
                     <span></span>
                 </div>
+                <div class="supporter">
+                    <img src="" alt="서폿">
+                    <br>
+                    <span></span>
+                </div>
                 <div class="etc">
-                    <img src="" alt="">
+                    <img src="" alt="기타">
                     <br>
                     <span></span>
                 </div>
@@ -122,6 +127,13 @@
                     <p class="user4">유저</p>
                     <p class="user5">유저</p>
                 </div>
+                <div class="users">
+                    <p class="user1">유저</p>
+                    <p class="user2">유저</p>
+                    <p class="user3">유저</p>
+                    <p class="user4">유저</p>
+                    <p class="user5">유저</p>
+                </div>
             </div>
             
         </section>
@@ -136,6 +148,15 @@
         let 레벨
         let 프사번호
         let id
+
+        let position = {
+            'TOP': 0,
+            'JUNGLE': 0,
+            'MIDDLE': 0,
+            'BOTTOM': 0,
+            'SUPPORT': 0,
+            'Invalid': 0,
+        }
         
         // 검색버튼에 클릭 이벤트 적용
         const 검색버튼 = document.querySelector('.search_button')
@@ -144,6 +165,7 @@
             await axios.get(`https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${닉네임.value}/${태그.value}?api_key=${api_key}`)
             .then(function (response) {
                 // 성공 핸들링
+                console.log(response)
                 puu_id = response.data.puuid
                 console.log(puu_id);
             })
@@ -198,32 +220,82 @@
             await axios.get(`https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${puu_id}/ids?start=0&count=20&api_key=${api_key}`)
             .then(async function (response) {
                 console.log(response)
-                let 코드플레이어 = response.data
-                console.log(코드플레이어)
-                // for(i=0; i<20; i+=1) {}
-                await 게임데이터가져오기(코드플레이어[0])
+                let 코드20개 = response.data
+                console.log(코드20개)
+                for(i=0; i<5; i+=1) { // 나중에 20개로 바꾸기
+                    await 게임데이터가져오기(코드20개[i])
+                }
             })
-            
-        })
-       // div추가 안됨
-        function 게임데이터가져오기(매치코드) {
-            axios.get(`https://asia.api.riotgames.com/lol/match/v5/matches/${매치코드}?api_key=${api_key}`)
-            .then(function (response) {
-                console.log(response)
+            const 승 = document.querySelector('.summary_menu .record h2 .win')
+            const 패 = document.querySelector('.summary_menu .record h2 .lose')
+            const 승률 = document.querySelector('.summary_menu .record h2 .rate')
+            승률.textContent = (Number(승.textContent) / (Number(승.textContent) + Number(패.textContent))*100).toFixed(2)
 
-                let 챔피언, 레벨, kill, death, kda, cs, gold, item, item1, item2, item3, item4, item5, item6, 룬1, 룬2, assists_, multikill
+            const kda = document.querySelector('.summary_menu h2 .kda')
+            const total_kill = document.querySelector('.summary_menu .record p .kill')
+            const total_death = document.querySelector('.summary_menu .record p .death')
+            const total_assist = document.querySelector('.summary_menu .record p .assist')
+            kda.textContent = (Number(total_kill.textContent) + Number(total_assist.textContent)) / Number(total_death.textContent)
+            kda.textContent = (Number(kda.textContent).toFixed(2))+ ':1'
+            total_kill.textContent = Number(total_kill.textContent / 20)
+            total_death.textContent = Number(total_death.textContent / 20)
+            total_assist.textContent = Number(total_assist.textContent / 20)
+
+            document.querySelector('.top span').textContent = position.TOP
+            document.querySelector('.jungle span').textContent = position.JUNGLE
+            document.querySelector('.mid span').textContent = position.MIDDLE
+            document.querySelector('.bot span').textContent = position.BOTTOM
+            document.querySelector('.supporter span').textContent = position.SUPPORT
+            document.querySelector('.etc span').textContent = position.Invalid
+        })
+        async function 게임데이터가져오기(매치코드) {
+            await axios.get(`https://asia.api.riotgames.com/lol/match/v5/matches/${매치코드}?api_key=${api_key}`)
+            .then(function (response) {
+                console.log('게임 데이터 ', response)
+
+                let 게임모드
+                if(response.data.info.queueId == 490) {
+                    게임모드 = '일반'
+                }
+                else if(response.data.info.queueId == 450) {
+                    게임모드 = 'ARAM'
+                }
+                else if(response.data.info.queueId == 440) {
+                    게임모드 = '자유랭크'
+                }
+                else if(response.data.info.queueId == 420) {
+                    게임모드 = '솔로랭크'
+                }
+                else if(response.data.info.queueId == 1810 || response.data.info.queueId == 1830 || response.data.info.queueId == 1840) {
+                    게임모드 = '집중포화'
+                }
+
+                let 챔피언, 레벨, kill, death, kda, cs, gold, item, item1, item2, item3, item4, item5, item6, 룬1, 룬2, assist, 멀티킬, win, 포지션
                 for(n=1; n <= 10; n+=1) {
                     if(response.data.info.participants[n].puuid == puu_id) {
-                        console.log(response.data.info.participants[n])
+                        console.log('현 유저: ',response.data.info.participants[n])
+                        
+                        win = response.data.info.participants[n].win
                         챔피언 = response.data.info.participants[n].championName
                         레벨 = response.data.info.participants[n].champLevel
+
+                        if(response.data.info.participants[n].pentaKills >= 1){
+                            멀티킬 = '펜타킬'
+                        }
+                        else if(response.data.info.participants[n].quadraKills >= 1){
+                            멀티킬 = '쿼드라킬'
+                        }
+                        else if(response.data.info.participants[n].doubleKills >= 1){
+                            멀티킬 = '더블킬'
+                        }
+                        else{멀티킬 = '없음'}
 
                         룬1 = response.data.info.participants[n].perks.styles[0].selections[0].perk
                         룬2 = response.data.info.participants[n].perks.styles[1].style
                         kill = response.data.info.participants[n].kills
                         death = response.data.info.participants[n].deaths
-                        assists_ = response.data.info.participants[n].assists
-                        kda = (response.data.info.participants[n].kills + response.data.info.participants[n].assists) / response.data.info.participants[n].deaths + ":1" //kda
+                        assist = response.data.info.participants[n].assists
+                        kda = (response.data.info.participants[n].kills + response.data.info.participants[n].assists) / response.data.info.participants[n].deaths //kda
                         cs = response.data.info.participants[n].totalMinionsKilled + response.data.info.participants[n].totalAllyJungleMinionsKilled + response.data.info.participants[n].totalEnemyJungleMinionsKilled
                         item = response.data.info.participants[n].item0 //아이템
                         item1 = response.data.info.participants[n].item1
@@ -234,32 +306,56 @@
                         item6 = response.data.info.participants[n].item6
                         gold = response.data.info.participants[n].goldEarned
 
+                        포지션 = response.data.info.participants[n].individualPosition
+                        console.log(포지션)
+                        position[포지션] += 1
+
+                        document.querySelector('.summary_menu .record p .kill').textContent = Number(document.querySelector('.summary_menu .record p .kill').textContent) + kill
+                        document.querySelector('.summary_menu .record p .death').textContent = Number(document.querySelector('.summary_menu .record p .death').textContent) + death
+                        document.querySelector('.summary_menu .record p .assist').textContent = Number(document.querySelector('.summary_menu .record p .assist').textContent) + assist
+                        break;
                     }
                 }
 
+                const 게임부모 = document.querySelector('.game20_menu')
                 let 게임 = document.createElement('div')
                 게임.classList.add('game')
-                // if(이겼을때) {
-                //     게임.classList.add('victory')
-                // }
-                // else{게임.classList.add('defeat')}
+                if(win == true) {
+                    게임.classList.add('victory')
+                    document.querySelector('.summary_menu .record h2 .win').textContent = Number(document.querySelector('.summary_menu .record h2 .win').textContent) + 1
+                }
+                else{
+                    게임.classList.add('defeat')
+                    document.querySelector('.summary_menu .record h2 .lose').textContent = Number(document.querySelector('.summary_menu .record h2 .lose').textContent) + 1
 
-                게임.innerHTML = `<div class="mod">
-                    <span>모드</span>
+                }
+
+                if(게임모드 == '집중포화') {
+                    게임.innerHTML = `
+                    <div class="mod">
+                        <h1>${게임모드}</h1>
+                    </div>`
+                    게임부모.appendChild(게임)
+                    return 0;
+                }
+                
+                게임.innerHTML = `
+                <div class="mod">
+                    <span>${게임모드}</span>
                 </div>
                 <div class="champion">
                     <img src=" https://opgg-static.akamaized.net/meta/images/lol/14.14.1/champion/${챔피언}.png" alt="">
                     <p>레벨 <span>${레벨}</span></p>
                 </div>
                 <div class="multikill">
-                    
+                    ${멀티킬}
                 </div>
                 <div class="rune">
-                    <img src="" alt="룬1">
-                    <img src="" alt="룬2">
+                    <img src="https://opgg-static.akamaized.net/meta/images/lol/14.14.1/perk/${룬1}.png" alt="룬1">
+                    <img src="https://opgg-static.akamaized.net/meta/images/lol/14.14.1/perk/${룬2}.png" alt="룬2">
                 </div>
                 <div class="score">
-                    <p><span class="kda">${kda}</span> <span class="kill">${kill}</span>/<span class="death">0</span>/<span class="assist">${assists_}</span></p>
+                    <p><span class="kda">${kda.toFixed(2) + ":1"}</span> <span class="kill">${kill}</span>/<span class="death">${death}</span>/<span class="assist">${assist}</span></p>
                     <p>GOLD <span class="gold">${gold}</span></p>
                     <p>CS <span class="cs">${cs}</span></p>
                 </div>
@@ -273,14 +369,25 @@
                     <img src="https://opgg-static.akamaized.net/meta/images/lol/14.14.1/item/${item6}.png" alt="7" class="item7">
                 </div>
                 <div class="users">
-                    <p class="user1">유저</p>
-                    <p class="user2">유저</p>
-                    <p class="user3">유저</p>
-                    <p class="user4">유저</p>
-                    <p class="user5">유저</p>
+                    <p class="user1">${response.data.info.participants[0].riotIdGameName}</p>
+                    <p class="user2">${response.data.info.participants[1].riotIdGameName}</p>
+                    <p class="user3">${response.data.info.participants[2].riotIdGameName}</p>
+                    <p class="user4">${response.data.info.participants[3].riotIdGameName}</p>
+                    <p class="user5">${response.data.info.participants[4].riotIdGameName}</p>
+                </div>
+                <div class="users">
+                    <p class="user1">${response.data.info.participants[5].riotIdGameName}</p>
+                    <p class="user2">${response.data.info.participants[6].riotIdGameName}</p>
+                    <p class="user3">${response.data.info.participants[7].riotIdGameName}</p>
+                    <p class="user4">${response.data.info.participants[8].riotIdGameName}</p>
+                    <p class="user5">${response.data.info.participants[9].riotIdGameName}</p>
                 </div>`
-                const 게임부모 = document.querySelector('.game20_menu')
                 게임부모.appendChild(게임)
+                
+            })
+            .catch(function (error) {
+                // 에러 핸들링
+                console.log(error);
             })
         }
 
