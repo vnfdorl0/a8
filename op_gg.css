@@ -62,8 +62,8 @@ body {background-color: rgb(234, 234, 234);}
 /* 20개 게임 메뉴 */
 .game20_menu {padding: 20px; text-align: center;}
 .game {display: flex; align-items: center; padding: 10px;}
-.victory {background-color: skyblue;}
-.defeat {background-color: rgb(234, 179, 197);}
+.victory {background-color: rgb(175, 213, 228); border-left: 3px solid skyblue;}
+.defeat {background-color: rgb(234, 179, 197); border-left: 3px solid rgb(228, 127, 161);}
 
 .mod {flex: 1;}
 .champion {flex: 1;}
@@ -71,9 +71,11 @@ body {background-color: rgb(234, 234, 234);}
 .multikill {flex: 1;}
 .rune {flex: 1;}
 .rune img {width: 30px;}
-.score {flex: 1;}
+.score {flex: 2;}
 .score .kda {font-size: 20pt; font-weight: 900;}
 .score .death {color: red;}
-.item {flex: 2;}
+.item {flex: 3;}
 .item img {width: 25px;}
-.users {flex: 1; } /*display: flex; justify-content: space-between;*/
+.users {flex: 3; display: flex; justify-content: space-between; text-align: left;}
+.users .team1 {flex: 1;}
+.users .team2 {flex: 1;}

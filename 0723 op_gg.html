@@ -144,7 +144,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        const api_key = 'RGAPI-fa71bb04-f244-4519-bd54-e4a636cc4a8d'
+        const api_key = 'RGAPI-db237895-c562-4c09-ad67-ce1d821600be'
         let 닉네임 = document.querySelector('.name')
         let 태그 = document.querySelector('.tag')
         let puu_id
@@ -197,7 +197,7 @@
                 if (response.data != undefined) {
                     const 솔랭이미지 = document.querySelector('.solo > img')
                 
-                    솔랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${response.data[0].tier}.png`)
+                    솔랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${(response.data[0].tier).toLowerCase()}.png`)
                     document.querySelector('.solo  .win').textContent = response.data[0].wins
                     document.querySelector('.solo .lose').textContent = response.data[0].losses
                     document.querySelector('.solo .rate').textContent = (response.data[0].wins / (response.data[0].wins + response.data[0].losses) * 100).toFixed(2)
@@ -205,7 +205,7 @@
                 if (response.data != undefined  && response.data[1].queueType == 'RANKED_FLEX_SR') {
                     const 자랭이미지 = document.querySelector('.flex > img')
                 
-                    자랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${response.data[1].tier}.png`)
+                    자랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${(response.data[1].tier.toLowerCase())}.png`)
                     document.querySelector('.flex .win').textContent = response.data[1].wins
                     document.querySelector('.flex .lose').textContent = response.data[1].losses
                     document.querySelector('.flex .rate').textContent = (response.data[1].wins / (response.data[1].wins + response.data[1].losses) * 100).toFixed(2)
@@ -213,7 +213,7 @@
                 else if (response.data != undefined  && response.data[1].queueType == 'CHERRY') {
                     const 자랭이미지 = document.querySelector('.flex > img')
                 
-                    자랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${response.data[2].tier}.png`)
+                    자랭이미지.setAttribute('src', `https://opgg-static.akamaized.net/images/medals_new/${(response.data[2].tier).toLowerCase()}.png`)
                     document.querySelector('.flex .win').textContent = response.data[2].wins
                     document.querySelector('.flex .lose').textContent = response.data[2].losses
                     document.querySelector('.flex .rate').textContent = (response.data[2].wins / (response.data[2].wins + response.data[2].losses) * 100).toFixed(2)
@@ -225,7 +225,7 @@
                 console.log(response)
                 let 코드20개 = response.data
                 console.log(코드20개)
-                for(i=0; i<5; i+=1) { // 나중에 20개로 바꾸기
+                for(i=0; i<20; i+=1) { // 나중에 20개로 바꾸기
                     await 게임데이터가져오기(코드20개[i])
                 }
             })
@@ -380,12 +380,13 @@
                         <p class="user5">${response.data.info.participants[4].riotIdGameName}</p>
                     </div>
                     
-                    <div class="team2"></div>
-                    <p class="user1">${response.data.info.participants[5].riotIdGameName}</p>
-                    <p class="user2">${response.data.info.participants[6].riotIdGameName}</p>
-                    <p class="user3">${response.data.info.participants[7].riotIdGameName}</p>
-                    <p class="user4">${response.data.info.participants[8].riotIdGameName}</p>
-                    <p class="user5">${response.data.info.participants[9].riotIdGameName}</p>
+                    <div class="team2">
+                        <p class="user1">${response.data.info.participants[5].riotIdGameName}</p>
+                        <p class="user2">${response.data.info.participants[6].riotIdGameName}</p>
+                        <p class="user3">${response.data.info.participants[7].riotIdGameName}</p>
+                        <p class="user4">${response.data.info.participants[8].riotIdGameName}</p>
+                        <p class="user5">${response.data.info.participants[9].riotIdGameName}</p>
+                    </div>
                 </div>`
                 게임부모.appendChild(게임)
                 
