@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*스타일 넣기*/
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div>
+            <h1>메뉴1</h1> <!-- 메뉴이름 바꾸기 -->
+            <img src="" alt=""> <!-- 이미지 넣기 -->
+            <p>price: \21000</p>
+            <label>
+                Quantity: 
+                <input type="number" value="1" min="0" step="1" name="21000">
+            </label>
+        </div>
+        <div>
+            <h1>메뉴2</h1>
+            <img src="" alt="">
+            <p>price: \17000</p>
+            <label>
+                Quantity: 
+                <input type="number" value="1" min="0" step="1" name="17000">
+            </label>
+        </div>
+        <div>
+            <h1>메뉴3</h1>
+            <img src="" alt="">
+            <p>price: \10000</p>
+            <label>
+                Quantity: 
+                <input type="number" value="1" min="0" step="1" name="10000">
+            </label>
+        </div>
+        <div>
+            <h1>메뉴4</h1>
+            <img src="" alt="">
+            <p>price: \8000</p>
+            <label>
+                Quantity: 
+                <input type="number" value="1" min="0" step="1" name="8000">
+            </label>
+        </div>
+    </div>
+    
+    <p>Total: \<span>56000</span></p>
+    
+    <script>
+        let inputs = document.querySelectorAll('input')
+        let total = document.querySelector('span')
+        
+        let sum_
+        inputs.forEach(function(i) {
+            i.addEventListener('change', function() {
+                sum_ = 0
+                inputs.forEach(function(n) {
+                    sum_+= Number(n.name) * Number(n.value)
+                })
+                total.textContent = sum_
+            })
+        })
+        
+
+
+    </script>
+</body>
+</html>
