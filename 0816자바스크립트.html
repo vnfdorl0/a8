@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1. 일정 시간마다 함수 코드를 실행 (주기적으로 실행)</h1>
+    <h1>2. 일정 시간 후에 코드 실행</h1>
+
+    <script>
+        // 일정 시간 실행
+        let 실행된함수 = function() {
+            console.log('일정 시간 마다 실행하는 함수')
+        }
+        let setInterval함수 = setInterval(실행된함수, 1000) // Interval: 간격 > 컴퓨터에서 밀리초 단위
+        clearInterval(setInterval함수)
+
+        // 일정 시간 후에 실행
+        let setTimeout함수 = setTimeout(function() {
+            alert('3초 지남')
+        }, 3000)
+        
+
+        clearTimeout(setTimeout함수)
+
+    </script>
+</body>
+</html>
