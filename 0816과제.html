@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        input {
+            padding: 10px;
+            width: 100px;
+            border-radius: 10px;
+            border: 1px solid rgb(103, 202, 169);
+        }
+        button {
+            height: 40px;
+            width: 50px;
+            border-radius: 10px;
+            border-style: none;
+            color: white;
+        }
+        .start {background-color: rgb(43, 208, 153);}
+        .stop {background-color: rgb(250, 31, 140);}
+
+        p {
+            font-size: 35px;
+            font-weight: 700;
+        }
+        span {
+            font-size: 110px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="">시간 설정 <input type="text" placeholder="초 입력">초</label>
+        <button class="start">시작</button>
+        <button class="stop">정지</button>
+    
+        <h1>남은 시간</h1>
+        <p><span>0</span>s</p>
+    </div>
+
+    <script>
+        let start_btn = document.querySelector('.start')
+        let stop_btn = document.querySelector('.stop')
+        let span = document.querySelector('span')
+        let inp = document.querySelector('input')
+
+        let n, start, end
+        start_btn.addEventListener('click', function() {
+            if(inp.value == '') {
+                console.log('0')
+            }
+            else{
+                clearInterval(start)
+                clearTimeout(end)
+
+                n = Number(inp.value)
+                start = setInterval(function() {
+                    span.textContent = n
+                    n -= 1
+                }, 1000)
+    
+                end = setTimeout(function() {
+                    clearInterval(start)
+                    clearTimeout(end)
+                }, n*1000+1000);
+            }
+
+        })
+        stop_btn.addEventListener('click', function() {
+            clearInterval(start)
+            clearTimeout(end)
+        })
+
+
+
+    </script>
+</body>
+</html>
