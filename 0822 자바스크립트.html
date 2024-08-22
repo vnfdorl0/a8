@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let 날짜 = new Date()
+        console.log(날짜)
+        console.log(날짜.getFullYear())
+        console.log(날짜.getMonth())
+        console.log(날짜.getDate())
+        console.log(날짜.getDay())
+        console.log(날짜.toLocaleDateString())
+
+        console.log(날짜.setMonth(1))
+        console.log(날짜.setDate(27))
+        console.log(날짜)
+
+        let 날짜2 = new Date(2006, 1, 27, 10, 30, 0)
+        console.log(날짜2)
+        console.log(날짜2.getHours())
+        console.log(날짜2.getMinutes())
+        console.log(날짜2.getSeconds())
+        console.log(날짜2.toLocaleTimeString())
+        console.log(날짜2.toISOString())
+        console.log(날짜2.getTime())
+
+        console.log('오늘의 시간', 날짜.getTime())
+        console.log('형준이 생일', 날짜2.getTime()) 
+
+        let 병윤생일 = new Date(2006, 1, 4, 10, 30, 0)
+        병윤생일 = 병윤생일.getTime()
+        let 형준생일 = 날짜2.getTime()
+        
+        let 초 = (형준생일 - 병윤생일)/1000
+        console.log(초, '초')
+
+        let 분 = 초/60
+        console.log(분, "분")
+
+        let 시간 = 분/60
+        console.log(시간, '시간')
+
+        let 일 = 시간/24
+        console.log(일, "일")
+    </script>
+</body>
+</html>
