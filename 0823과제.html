@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+        }
+        .timer {
+            border: 1px black solid;
+            width: 700px;
+            height: 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>D-Day Timer</h1>
+        <hr>
+        <input type="date" value="2024-08-24">
+        <button>시작</button>
+        
+        <div class="timer">
+            <p>
+                <span class="day">0</span>일 
+                <span class="hour">0</span>시간 
+                <span class="minute">0</span>분 
+                <span class="seconde">0</span>초
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const dateInput = document.querySelector("input")
+        const startBtn = document.querySelector("button")
+
+        let DTime, inpDTime, day, hour, minute, seconde, D_Day
+        startBtn.addEventListener("click", function() {
+            // clearInterval(D_Day)
+            // D_Day = setInterval(() => {}, 1000)
+
+            // input 날짜
+            inpDTime = dateInput.valueAsDate
+            console.log(inpDTime)
+            
+            console.log('')
+
+            // 현재 날짜
+            DTime = new Date()
+            console.log(DTime)
+
+            console.log('')
+
+            // 시간 계산
+            let time = (inpDTime.getTime() - DTime.getTime())
+            seconde = time/1000
+            minute = seconde/60
+            hour = minute/60
+            day = hour/24
+            
+            
+            console.log(day)
+            console.log(hour)
+            console.log(minute)
+            console.log(seconde)
+        })
+
+
+
+    </script>
+</body>
+</html>
