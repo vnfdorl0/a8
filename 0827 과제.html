@@ -35,184 +35,188 @@
 
     <div class="container">
         <div class="row">
-            <div class="card">
-                <img src="#" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">프라임 립</h5>
-                    <p class="card-text">설명</p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        상세보기
-                    </button>
+            <div class="col scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
+                <!-- 아이템1 -->
+                <div class="card" id="item1">
+                    <img src="#" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">프라임 립</h5>
+                        <p class="card-text">설명</p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            상세보기
+                        </button>
+                    </div>
                 </div>
-            </div>
-        
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">프라임립</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>평점:</p>
-                            <p>가격:</p>
-                            <label for="inp">주문수량</label>
-                            <input type="number" id="inp">
-                            <button class="btn btn-primary">가격 계산</button>
-        
-                            <div class="dropdown">
-                                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    배달여부
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="" class="dropdown-item" href="#">방문포장</a></li>
-                                    <li><a href="" class="dropdown-item" href="#">매장식사</a></li>
-                                    <li><a href="" class="dropdown-item" href="#">배달</a></li>
-                                </ul>
+                <!-- 아이템2 -->
+                <div class="card" id="item2">
+                    <img src="#" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="badge text-bg-primary rounded-pill">New</span>양갈비</h5>
+                        <p class="card-text">설명</p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            상세보기
+                        </button>
+                    </div>
+                </div>
+                <!-- 아이템3 -->
+                <div class="card" id="item3">
+                    <img src="#" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="badge text-bg-danger rounded-pill">Best</span>아구찜</h5>
+                        <p class="card-text">설명</p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            상세보기
+                        </button>
+                    </div>
+                </div>
+                <!-- 아이템4 -->
+                <div class="card" id="item4">
+                    <img src="#" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="badge text-bg-danger rounded-pill">Best</span>간장게장</h5>
+                        <p class="card-text">설명</p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            상세보기
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- 아이템1 -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">프라임립</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>평점:</p>
+                                <p>가격:</p>
+                                <label for="inp">주문수량</label>
+                                <input type="number" id="inp">
+                                <button class="btn btn-primary">가격 계산</button>
+            
+                                <div class="dropdown">
+                                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        배달여부
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="" class="dropdown-item" href="#">방문포장</a></li>
+                                        <li><a href="" class="dropdown-item" href="#">매장식사</a></li>
+                                        <li><a href="" class="dropdown-item" href="#">배달</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!-- 아이템2 -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">양갈비</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>평점:</p>
+                                <p>가격:</p>
+                                <label for="inp">주문수량</label>
+                                <input type="number" id="inp">
+                                <button class="btn btn-primary">가격 계산</button>
+            
+                                <div class="dropdown">
+                                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        배달여부
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="" class="dropdown-item" href="#">방문포장</a></li>
+                                        <li><a href="" class="dropdown-item" href="#">매장식사</a></li>
+                                        <li><a href="" class="dropdown-item" href="#">배달</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 아이템3 -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">아구찜</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>평점:</p>
+                                <p>가격:</p>
+                                <label for="inp">주문수량</label>
+                                <input type="number" id="inp">
+                                <button class="btn btn-primary">가격 계산</button>
+            
+                                <div class="dropdown">
+                                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        배달여부
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="" class="dropdown-item" href="#">방문포장</a></li>
+                                        <li><a href="" class="dropdown-item" href="#">매장식사</a></li>
+                                        <li><a href="" class="dropdown-item" href="#">배달</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 아이템4 -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">간장게장</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>평점:</p>
+                                <p>가격:</p>
+                                <label for="inp">주문수량</label>
+                                <input type="number" id="inp">
+                                <button class="btn btn-primary">가격 계산</button>
+            
+                                <div class="dropdown">
+                                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        배달여부
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="" class="dropdown-item" href="#">방문포장</a></li>
+                                        <li><a href="" class="dropdown-item" href="#">매장식사</a></li>
+                                        <li><a href="" class="dropdown-item" href="#">배달</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        
-            <div class="card">
-                <img src="#" alt="">
-                <div class="card-body">
-                    <h5 class="card-title"><span class="badge text-bg-primary rounded-pill">New</span>양갈비</h5>
-                    <p class="card-text">설명</p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        상세보기
-                    </button>
+            <div class="col">
+                <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#item1">프라임 립</a>
+                    <a class="list-group-item list-group-item-action" href="#item2">양갈비</a>
+                    <a class="list-group-item list-group-item-action" href="#item3">아구찜</a>
+                    <a class="list-group-item list-group-item-action" href="#item4">간장게장</a>
                 </div>
-            </div>
-        
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">양갈비</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>평점:</p>
-                            <p>가격:</p>
-                            <label for="inp">주문수량</label>
-                            <input type="number" id="inp">
-                            <button class="btn btn-primary">가격 계산</button>
-        
-                            <div class="dropdown">
-                                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    배달여부
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="" class="dropdown-item" href="#">방문포장</a></li>
-                                    <li><a href="" class="dropdown-item" href="#">매장식사</a></li>
-                                    <li><a href="" class="dropdown-item" href="#">배달</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="card">
-                <img src="#" alt="">
-                <div class="card-body">
-                    <h5 class="card-title"><span class="badge text-bg-danger rounded-pill">Best</span>아구찜</h5>
-                    <p class="card-text">설명</p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        상세보기
-                    </button>
-                </div>
-            </div>
-        
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">아구찜</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>평점:</p>
-                            <p>가격:</p>
-                            <label for="inp">주문수량</label>
-                            <input type="number" id="inp">
-                            <button class="btn btn-primary">가격 계산</button>
-        
-                            <div class="dropdown">
-                                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    배달여부
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="" class="dropdown-item" href="#">방문포장</a></li>
-                                    <li><a href="" class="dropdown-item" href="#">매장식사</a></li>
-                                    <li><a href="" class="dropdown-item" href="#">배달</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="card">
-                <img src="#" alt="">
-                <div class="card-body">
-                    <h5 class="card-title"><span class="badge text-bg-danger rounded-pill">Best</span>간장게장</h5>
-                    <p class="card-text">설명</p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        상세보기
-                    </button>
-                </div>
-            </div>
-        
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">간장게장</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>평점:</p>
-                            <p>가격:</p>
-                            <label for="inp">주문수량</label>
-                            <input type="number" id="inp">
-                            <button class="btn btn-primary">가격 계산</button>
-        
-                            <div class="dropdown">
-                                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    배달여부
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="" class="dropdown-item" href="#">방문포장</a></li>
-                                    <li><a href="" class="dropdown-item" href="#">매장식사</a></li>
-                                    <li><a href="" class="dropdown-item" href="#">배달</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div id="list-example" class="list-group">
-                <a href="" class="list-group list-group-item-action" href="#"></a>
-                <a href="" class="list-group list-group-item-action" href="#"></a>
-                <a href="" class="list-group list-group-item-action" href="#"></a>
-                <a href="" class="list-group list-group-item-action" href="#"></a>
             </div>
         </div>
     </div>
