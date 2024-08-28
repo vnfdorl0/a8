@@ -8,81 +8,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">메뉴</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">다이닝 예약</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">부대시설</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">마이페이지</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-      </nav>
-
+    
     <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">메뉴</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">다이닝 예약</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">부대시설</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true">마이페이지</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
         <div class="row">
-            <div class="col scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
+            <div class="col-md-9 col-sm-12 scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
                 <!-- 아이템1 -->
                 <div class="card" id="item1">
-                    <img src="#" alt="">
+                    <img src="https://www.seriouseats.com/thmb/AiLm0zaHWAHx6lZHFUHEUE4cA7U=/1500x0/filters:no_upscale%28%29:max_bytes%28150000%29:strip_icc%28%29:format%28webp%29/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2019__12__20191119-koji-prime-rib-vicky-wasik-24-1500x1125-1577ef5fa38041419ce07db3b537a97f.jpg" alt="">
                     <div class="card-body">
                         <h5 class="card-title">프라임 립</h5>
                         <p class="card-text">설명</p>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#Modal1">
                             상세보기
                         </button>
                     </div>
                 </div>
-                <!-- 아이템2 -->
-                <div class="card" id="item2">
-                    <img src="#" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title"><span class="badge text-bg-primary rounded-pill">New</span>양갈비</h5>
-                        <p class="card-text">설명</p>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            상세보기
-                        </button>
-                    </div>
-                </div>
-                <!-- 아이템3 -->
-                <div class="card" id="item3">
-                    <img src="#" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title"><span class="badge text-bg-danger rounded-pill">Best</span>아구찜</h5>
-                        <p class="card-text">설명</p>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            상세보기
-                        </button>
-                    </div>
-                </div>
-                <!-- 아이템4 -->
-                <div class="card" id="item4">
-                    <img src="#" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title"><span class="badge text-bg-danger rounded-pill">Best</span>간장게장</h5>
-                        <p class="card-text">설명</p>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            상세보기
-                        </button>
-                    </div>
-                </div>
-    
-                <!-- 아이템1 -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -90,12 +55,11 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>평점:</p>
-                                <p>가격:</p>
+                                <p>평점 : ★★★★☆</p>
+                                <p>가격 : 49,000원</p>
                                 <label for="inp">주문수량</label>
-                                <input type="number" id="inp">
+                                <input type="number" id="inp" class="border border-1 border-secondary-subtle rounded mx-2 mb-3" style="height: 35px; width: 200px;">
                                 <button class="btn btn-primary">가격 계산</button>
-            
                                 <div class="dropdown">
                                     <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         배달여부
@@ -113,8 +77,19 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- 아이템2 -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="card" id="item2">
+                    <img src="https://m.greenlamb.kr/web/product/big/201812/7ed00d841930cc6596a02136dd1d7f72.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="badge text-bg-primary rounded-pill">New</span>양갈비</h5>
+                        <p class="card-text">설명</p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#Modal2">
+                            상세보기
+                        </button>
+                    </div>
+                </div>
+                <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -122,10 +97,10 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>평점:</p>
-                                <p>가격:</p>
+                                <p>평점 : ★★★★☆</p>
+                                <p>가격 : 32,000원</p>
                                 <label for="inp">주문수량</label>
-                                <input type="number" id="inp">
+                                <input type="number" id="inp" class="border border-1 border-secondary-subtle rounded mx-2 mb-3" style="height: 35px; width: 200px;">
                                 <button class="btn btn-primary">가격 계산</button>
             
                                 <div class="dropdown">
@@ -145,8 +120,19 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- 아이템3 -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="card" id="item3">
+                    <img src="https://lh3.googleusercontent.com/proxy/tlXfZYxS3mdmwQkXMxI74RJuN5s0ZHMZko2w0LzYwn7FQOYI4GtIzEsl7A1PNdrlXJtiNDi_UEJpO78tCoVkXqiiaR3xD0mKil1osk6Z" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="badge text-bg-danger rounded-pill">Best</span>아구찜</h5>
+                        <p class="card-text">설명</p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#Modal3">
+                            상세보기
+                        </button>
+                    </div>
+                </div>
+                <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -154,10 +140,10 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>평점:</p>
-                                <p>가격:</p>
+                                <p>평점 : ★★★★★</p>
+                                <p>가격 : 45,000원</p>
                                 <label for="inp">주문수량</label>
-                                <input type="number" id="inp">
+                                <input type="number" id="inp"  class="border border-1 border-secondary-subtle rounded mx-2 mb-3" style="height: 35px; width: 200px;">
                                 <button class="btn btn-primary">가격 계산</button>
             
                                 <div class="dropdown">
@@ -177,8 +163,19 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- 아이템4 -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="card" id="item4">
+                    <img src="https://cdn.oasis.co.kr:48581/product/52477/thumb/thumb_52477680446b5-5a05-4450-b778-1ae2c979ee38.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="badge text-bg-danger rounded-pill">Best</span>간장게장</h5>
+                        <p class="card-text">설명</p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#Modal4">
+                            상세보기
+                        </button>
+                    </div>
+                </div>
+                <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -186,10 +183,10 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>평점:</p>
-                                <p>가격:</p>
+                                <p>평점 : ★★★★★</p>
+                                <p>가격 : 35,000원</p>
                                 <label for="inp">주문수량</label>
-                                <input type="number" id="inp">
+                                <input type="number" id="inp" class="border border-1 border-secondary-subtle rounded mx-2 mb-3" style="height: 35px; width: 200px;">
                                 <button class="btn btn-primary">가격 계산</button>
             
                                 <div class="dropdown">
@@ -209,13 +206,21 @@
                         </div>
                     </div>
                 </div>
+    
             </div>
-            <div class="col">
-                <div id="list-example" class="list-group">
+            <div class="col-sm">
+                <h3>메뉴</h3>
+                <div id="list-example" class="list-group mb-4">
                     <a class="list-group-item list-group-item-action" href="#item1">프라임 립</a>
                     <a class="list-group-item list-group-item-action" href="#item2">양갈비</a>
                     <a class="list-group-item list-group-item-action" href="#item3">아구찜</a>
                     <a class="list-group-item list-group-item-action" href="#item4">간장게장</a>
+                </div>
+                <div class="card">
+                    <img src="https://tiermaker.com/images/media/template_images/2024/15856531/sols-rng-aura-tier-list-15856531/archangel.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <p>카드</p>
+                    </div>
                 </div>
             </div>
         </div>
