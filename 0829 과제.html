@@ -8,8 +8,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body class="bg-warning">
-    <div class="container">
-        <form class="bg-light p-5 rounded-4 my-5">
+    <div class="container bg-light rounded-4 my-5 p-5">
+        <form class=" ">
             <div class="mb-3">
                 <h1 class="mb-4">회원가입 하세요</h1>
                 
@@ -29,41 +29,41 @@
             </div>
             <div>
                 <div class="mb-3 row">
-                    <label for="id" class="col-2" data-bs-toggle="tooltip" data-bs-title="사용할 ID를 입력하세요">ID</label>
+                    <label for="id" class="col-md-2" data-bs-toggle="tooltip" data-bs-title="사용할 ID를 입력하세요">ID</label>
                     <input type="text" id="id" class="form-control col">
                 </div>
                 <div class="mb-3 row">
-                    <label for="password" class="col-2" data-bs-toggle="tooltip" data-bs-title="사용할 비밀번호를 입력하세요">비밀번호</label>
+                    <label for="password" class="col-md-2" data-bs-toggle="tooltip" data-bs-title="사용할 비밀번호를 입력하세요">비밀번호</label>
                     <input type="text" id="password" class="form-control col">
                 </div>
                 <div class="mb-3 row">
-                    <label for="password_check" class="col-2" data-bs-toggle="tooltip" data-bs-title="비밀번호를 한 번 더 입력하세요">비밀번호 확인</label>
+                    <label for="password_check" class="col-md-2" data-bs-toggle="tooltip" data-bs-title="비밀번호를 한 번 더 입력하세요">비밀번호 확인</label>
                     <input type="text" id="password_check" class="form-control col">
                 </div>
                 <div class="mb-3 row">
-                    <label for="" class="col-2" data-bs-toggle="tooltip" data-bs-title="당신의 이름">이름</label>
-                    <input type="text" class="form-control col me-3" placeholder="First name">
-                    <input type="text" class="form-control col" placeholder="Last name">
+                    <label for="" class="col-md-2" data-bs-toggle="tooltip" data-bs-title="당신의 이름">이름</label>
+                    <input type="text" class="form-control col-md me-4" placeholder="First name">
+                    <input type="text" class="form-control col-md" placeholder="Last name">
                 </div>
                 <div class="mb-3 row">
-                    <label for="" class="col-2" data-bs-toggle="tooltip" data-bs-title="휴대전화 번호를 입력하세요">연락처</label>
+                    <label for="" class="col-md-2" data-bs-toggle="tooltip" data-bs-title="휴대전화 번호를 입력하세요">연락처</label>
                     <input type="text" class="form-control col">
                 </div>
                 <div class="mb-3 row">
-                    <span class="col-2">성별</span>
+                    <span class="col-md-2">성별</span>
                     <div class="col row">
                         <label for="man"><input type="radio" name="radio" id="man" class="form-check-input" checked>남</label>
                         <label for="woman"><input type="radio" name="radio" id="woman" class="form-check-input">여</label>
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <span class="col-2">취미</span>
-                    <div class="col">
-                        <label for="game"><input type="checkbox" id="game" class="form-check-input">게임</label>
-                        <label for="act"><input type="checkbox" id="act" class="form-check-input">운동</label>
-                        <label for="book"><input type="checkbox" id="book" class="form-check-input">독서</label>
-                        <label for="music"><input type="checkbox" id="music" class="form-check-input">음악</label>
-                        <label for="tip"><input type="checkbox" id="tip" class="form-check-input">여행</label>
+                <div class="mb-3 me-5 row">
+                    <span class="col-md-2">취미</span>
+                    <div class="col-md row">
+                    <label for="game" class="col-2"><input type="checkbox" id="game" class="form-check-input">게임</label>
+                    <label for="act" class="col-2"><input type="checkbox" id="act" class="form-check-input">운동</label>
+                    <label for="book" class="col-2"><input type="checkbox" id="book" class="form-check-input">독서</label>
+                    <label for="music" class="col-2"><input type="checkbox" id="music" class="form-check-input">음악</label>
+                    <label for="tip" class="col-2"><input type="checkbox" id="tip" class="form-check-input">여행</label>
                     </div>
                 </div>
                 <hr>
@@ -79,7 +79,7 @@
                     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                         <div class="toast-header">
                             <img src="..." class="rounded me-2" alt="...">
-                            <strong class="me-auto">가입 왼료 안내</strong>
+                            <strong class="me-auto">가입 완료 안내</strong>
                             <small>11 mins ago</small>
                             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                         </div>
