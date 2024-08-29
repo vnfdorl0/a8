@@ -20,7 +20,7 @@
     <div>
         <h1>D-Day Timer</h1>
         <hr>
-        <input type="date" value="2024-08-24">
+        <input type="date">
         <button>시작</button>
         
         <div class="timer">
@@ -37,35 +37,46 @@
         const dateInput = document.querySelector("input")
         const startBtn = document.querySelector("button")
 
-        let DTime, inpDTime, day, hour, minute, seconde, D_Day
+        let DTime, inpDTime, day, hour, minute, seconde, D_Day, time, timer
         startBtn.addEventListener("click", function() {
+            clearInterval(timer)
+            timer = setInterval(function() {
+            if (day <= 0 && hour <= 0 && minute <= 0 && seconde <= 0) {
+                clearInterval(timer)
+            }
             // clearInterval(D_Day)
             // D_Day = setInterval(() => {}, 1000)
 
             // input 날짜
             inpDTime = dateInput.valueAsDate
-            console.log(inpDTime)
+            // console.log(inpDTime)
             
             console.log('')
 
             // 현재 날짜
             DTime = new Date()
-            console.log(DTime)
+            // console.log(DTime)
 
             console.log('')
 
             // 시간 계산
-            let time = (inpDTime.getTime() - DTime.getTime())
-            seconde = time/1000
-            minute = seconde/60
-            hour = minute/60
-            day = hour/24
+            time = (inpDTime.getTime() - DTime.getTime())
+            seconde = Math.floor(time/1000)
+            minute = Math.floor(seconde/60)
+            hour = Math.floor(minute/60)
+            day = Math.floor(hour/24)
+            
+            // console.log(day)
+            // console.log(hour-(day*24))
+            // console.log(minute-(hour*60))
+            // console.log(seconde-(minute*60))
             
             
-            console.log(day)
-            console.log(hour)
-            console.log(minute)
-            console.log(seconde)
+            document.querySelector('.day').textContent = day
+            document.querySelector('.hour').textContent = hour-(day*24)
+            document.querySelector('.minute').textContent = minute-(hour*60)
+            document.querySelector('.seconde').textContent = seconde-(minute*60)
+            }, 1000)
         })
 
 
