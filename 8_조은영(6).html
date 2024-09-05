@@ -36,11 +36,28 @@
             margin-bottom: 100px;
             background-color: rgb(208, 173, 230);
             padding: 5px;
+            border-radius: 10px;
         }
-        .box > div {
+        .box div {
             border: 3px solid white;
             padding: 10px;
-            
+            border-radius: 7px;
+        }
+        h3 {
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        h3 > span {
+            border: 2px solid white;
+            border-radius: 30px 30px 5px 5px;
+            padding: 5px 10px;
+            font-weight: 600;
+        }
+        .box p {
+            font-size: 15pt;
+        }
+        .line {
+            border-top: 1px solid white;
         }
         footer {
             background-color: black;
@@ -83,24 +100,24 @@
                 <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
                     <div class="box">
                         <div>
-                            <h3 id="list1">자기소개</h3>
+                            <h3 id="list1"><span>자기소개</span></h3>
+                            <p class="line">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, ratione.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div>
+                            <h3 id="list2"><span>잘하는 일</span></h3>
                             <p></p>
                         </div>
                     </div>
                     <div class="box">
                         <div>
-                            <h3 id="list2">잘하는 일</h3>
-                            <p></p>
+                            <h3 id="list3"><span>다룰수 있는 것</span></h3>
                         </div>
                     </div>
                     <div class="box">
                         <div>
-                            <h3 id="list3">다룰수 있는 것</h3>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div>
-                            <h3 id="list4">포트폴리오</h3>
+                            <h3 id="list4"><span>포트폴리오</span></h3>
                         </div>
                     </div>
                 </div>
