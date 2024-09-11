@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>프로미스 Promise: 약속</h1>
+
+    <script>
+        let 프로미스 = new Promise((성공, 실패) => {
+            if(true) {
+                성공("작업이 성공 했습니다")
+            }
+            else {
+                실패("작업이 실패 했습니다")
+            }
+        })
+
+        프로미스.then((message) => {console.log(message)}) // riot api를 정상호출 했을 때
+        .catch((message) => {console.log(message)}) // 데이터를 못 받아왔을 때
+
+
+        async function name() {
+            await 병윤이를기다린다()
+            await 다음약속을진행한다()
+        }
+    </script>
+</body>
+</html>
