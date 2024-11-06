@@ -4,13 +4,15 @@
 }
 body {
     height:1000px;
-    background: linear-gradient(to top right, rgb(32, 32, 32), rgb(86, 72, 63));
+    background: linear-gradient(to right, rgb(35, 35, 35), rgb(77, 67, 60));
 }
+
+/* 메뉴 */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    /* background: linear-gradient(to right, rgb(0, 0, 0), rgb(52, 49, 47), rgb(65, 56, 51), rgb(86, 72, 63)); */
+    background: linear-gradient(to right, rgb(21, 21, 21), rgb(52, 49, 47), rgb(65, 56, 51), rgb(86, 72, 63));
 }
 .nav_list {
     display: flex;
@@ -28,29 +30,50 @@ nav {
     height: 20px;
     /* border: 1px white solid; */
     text-align: center;
+    transition: transform ease-in-out 0.1s, border-color ease-in 0.3s;
 }
 .nav_list-item:hover {
     font-weight: 700;
+    font-size: 17px;
     cursor: pointer;
-    margin-top: 10px;
+    transform: translateY(-8px);
+    height: 30px;
     margin-bottom: 0px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid coral;
 }
-.search {margin-top: 10px;}
-.search input {
+.search {
+    margin-top: 10px;
+}
+.search input, .search button {
+    /* border-style: none; */
     border-radius: 15px;
-    height: 25px;
+    background-color: rgba(0, 0, 0, 0.39);
+    border-color: rgba(255, 255, 255, 0.703);
+    position: relative;
+}
+.search input {
+    height: 30px;
     width: 200px;
+    padding-left: 10px;
+    margin-right: 3px;
+    bottom: 5px;
 }
 .search button {
+    color: white;
     width: 50px;
-    height: 30px;
+    height: 35px;
     font-size: 15px;
     font-weight: 700;
-    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    bottom: 2px;
+}
+.search button:hover {
+    cursor: pointer;
+    background-color: rgba(118, 118, 118, 0.352);
 }
 
+/* 메인 */
 section {
     display: grid;
     /* background: linear-gradient(to top right, rgb(16, 16, 16), rgb(47, 44, 42), rgb(64, 54, 49)); */
@@ -62,27 +85,22 @@ section > * {
     overflow: hidden;
 }
 .section1 {
-    background: linear-gradient(to top right, rgb(16, 16, 16), rgb(62, 56, 53), rgb(95, 77, 68));
+    /* background: linear-gradient(to top right, rgb(16, 16, 16), rgb(62, 56, 53), rgb(95, 77, 68)); */
     margin-top: 45px;
     padding-top: 10px;
-    padding-bottom: 0;
+    padding-bottom: 5px;
     grid-template-columns: 1fr 4fr;
-    height: 300px;
-    box-shadow: 2px 2px 3px black;
-}
-aside {
-    height: 290px;
-    align-self: self-end;
+    height: 400px;
+    box-shadow: 2px 2px 5px black;
 }
 .section2 {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
-.section2-item {
-    height: 170px;
-}
 .card-img {
-    height: 100px;
+    height: 170px;
+    background-size: cover;
+    background-position: center;
 }
 .card-info {
     color: white;
