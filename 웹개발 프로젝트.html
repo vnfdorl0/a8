@@ -3,8 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹개발 프로젝트</title>
-    <link rel="stylesheet" href="웹개발.css">
+    <title>웹개발 프로젝트 8_조은영</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height:1000px;
+            background: linear-gradient(to right, rgb(35, 35, 35), rgb(105, 82, 65));
+        }
+
+        /* 메뉴 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to right, rgb(21, 21, 21), rgb(60, 56, 53), rgb(76, 61, 55), rgb(94, 75, 64));
+        }
+        .nav_list {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            color: white;
+            box-shadow: 1px 1px 3px black;
+        }
+        .nav_list-item, .logo {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .logo::before{
+            content: '★';
+            font-size: 27px;
+            line-height: 10px;
+        }
+        .nav_list-item {
+            width: 70px;
+            height: 20px;
+            text-align: center;
+            transition: transform ease-in-out 0.1s, border-color ease-in 0.3s;
+        }
+        .nav_list-item:hover {
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            transform: translateY(-8px);
+            height: 30px;
+            margin-bottom: 0px;
+            border-bottom: 1px solid coral;
+        }
+        .search {margin-top: 10px;}
+        .search input, .search button {
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.39);
+            border-color: rgba(255, 255, 255, 0.703);
+            position: relative;
+        }
+        .search input {
+            height: 30px;
+            width: 240px;
+            padding-left: 10px;
+            margin-right: 3px;
+            bottom: 5px;
+        }
+        .search button {
+            color: white;
+            width: 50px;
+            height: 35px;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 5px;
+            text-align: center;
+            bottom: 2px;
+        }
+        .search button:hover {
+            cursor: pointer;
+            background-color: rgba(118, 118, 118, 0.352);
+        }
+
+        /* 메인 */
+        section {
+            display: grid;
+            padding:15px;
+            gap: 10px;
+        }
+        section > * {overflow: hidden;}
+        .section1 {
+            margin-top: 45px;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            grid-template-columns: 1fr 4fr;
+            box-shadow: 2px 2px 5px black;
+        }
+        .section1 > * {height: 99%;}
+        aside img, article img {width: 100%;}
+        aside {padding-top: 15px;}
+        .aside-div {
+            margin-top: 5px;
+            text-align: center;
+        }
+        .aside-div button {
+            border-radius: 17px;
+            width: 230px;
+            padding: 10px 0;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .button1 {
+            background: linear-gradient(rgb(182, 248, 255), rgb(45, 82, 182));
+            border-color: rgb(255, 255, 255);
+            color: black;
+        }
+        .button2 {
+            border-color: rgb(27, 47, 201);
+            background-color: black;
+        }
+        .button3 {
+            border-color: coral;
+            background-color: black;
+        }
+        article, aside img, .section2-item {
+            border: rgb(0, 0, 0) solid 1px;
+            border-radius: 10px;
+        }
+        .section2 {grid-template-columns: repeat(5, 1fr);}
+        .card-img {
+            height: 170px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.47);
+        }
+        .card-info {
+            color: white;
+            background: linear-gradient(to top, rgb(32, 32, 32), rgb(71, 61, 54));
+            height: 70px;
+            padding: 10px;
+            position: relative;
+        }
+        .card-info > p {
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+        .card-info::after {
+            content: "[sol's rng]";
+            font-size: 12px;
+            position: absolute;
+            right: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,7 +163,7 @@
                 <li class="nav_list-item">추천</li>
                 <li class="nav_list-item">인기</li>
                 <li class="nav_list-item">알림</li>
-                <li  class="search"><input type="text" placeholder="검색어를 입력하세요"><button>검색</button></li>
+                <li class="search"><input type="text" placeholder="검색어를 입력하세요"><button>검색</button></li>
                 <li class="nav_list-item">설정</li>
                 <li class="nav_list-item">프로필</li>
                 <li class="nav_list-item">로그인</li>
