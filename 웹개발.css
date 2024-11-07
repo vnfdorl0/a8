@@ -25,6 +25,11 @@ nav {
     margin-top: 15px;
     margin-bottom: 10px;
 }
+.logo::before{
+    content: '★';
+    font-size: 27px;
+    line-height: 10px;
+}
 .nav_list-item {
     width: 70px;
     height: 20px;
@@ -127,5 +132,15 @@ article, aside img, .section2-item {
     background: linear-gradient(to top, rgb(32, 32, 32), rgb(71, 61, 54));
     height: 70px;
     padding: 10px;
+    position: relative;
 }
-.card-info > p {font-size: 14px;}
+.card-info > p {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+.card-info::after {
+    content: "[sol's rng]";
+    font-size: 12px;
+    position: absolute;
+    right: 5px;
+}
