@@ -28,7 +28,6 @@ nav {
 .nav_list-item {
     width: 70px;
     height: 20px;
-    /* border: 1px white solid; */
     text-align: center;
     transition: transform ease-in-out 0.1s, border-color ease-in 0.3s;
 }
@@ -41,11 +40,8 @@ nav {
     margin-bottom: 0px;
     border-bottom: 1px solid coral;
 }
-.search {
-    margin-top: 10px;
-}
+.search {margin-top: 10px;}
 .search input, .search button {
-    /* border-style: none; */
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.39);
     border-color: rgba(255, 255, 255, 0.703);
@@ -76,15 +72,11 @@ nav {
 /* 메인 */
 section {
     display: grid;
-    /* background: linear-gradient(to top right, rgb(16, 16, 16), rgb(47, 44, 42), rgb(64, 54, 49)); */
     padding:15px;
     gap: 10px;
 }
-section > * {
-    overflow: hidden;
-}
+section > * {overflow: hidden;}
 .section1 {
-    /* background: linear-gradient(to top right, rgb(16, 16, 16), rgb(62, 56, 53), rgb(95, 77, 68)); */
     margin-top: 45px;
     padding-top: 10px;
     padding-bottom: 5px;
@@ -122,9 +114,7 @@ article, aside img, .section2-item {
     border: rgb(0, 0, 0) solid 1px;
     border-radius: 10px;
 }
-.section2 {
-    grid-template-columns: repeat(5, 1fr);
-}
+.section2 {grid-template-columns: repeat(5, 1fr);}
 .card-img {
     height: 170px;
     background-position: center;
@@ -138,6 +128,4 @@ article, aside img, .section2-item {
     height: 70px;
     padding: 10px;
 }
-.card-info > p {
-    font-size: 14px;
-}
+.card-info > p {font-size: 14px;}
